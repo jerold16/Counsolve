@@ -21,10 +21,9 @@ const Chooseus = () => {
            <Col sm={7} md={9} lg={12}
            onMouseEnter={()=>setisflip(true)}
            onMouseLeave={()=>setisflip(false)}
-            id='cardchange'
             style={{backgroundColor : isflip? "rgb(39,46,57)" : "rgb(226,232,240)",
                    color: isflip? "whitesmoke": "black" }}
-            className='themc position-relative lg:left-16 border flex rounded-s-3xl my-4
+            className='transition duration-300 position-relative lg:left-16 border flex rounded-s-3xl my-4
              bg-slate-200'>
             <div className=' py-4  ps-2 md:p-6'>
             <ReactCardFlip flipDirection='vertical' isFlipped={isflip}>
@@ -54,7 +53,9 @@ const Chooseus = () => {
             <Col sm={7} md={9} lg={12}
             onMouseEnter={()=>setisflipcard2(true)}
             onMouseLeave={()=>setisflipcard2(false)}
-            className='my-4 border flex rounded-s-3xl bg-slate-200'>
+            style={{backgroundColor : isflipcard2? "rgb(39,46,57)" : "rgb(226,232,240)",
+                   color: isflipcard2? "whitesmoke": "black" }}
+            className='my-4 transition duration-300 border flex rounded-s-3xl bg-slate-200'>
             <div className='py-4 ps-2 md:p-6 '>
               <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard2}>
               <div className='thefrontcard'>
@@ -71,16 +72,23 @@ const Chooseus = () => {
             </div>
            {/* Flag creation */}
            <div className='d-flex  position-relative bottom-6 left-7'>
-               <div className='w-6 h-6 rounded-ss-3xl bg-violet-800'
-               ></div>
-               <div className='p-2 h-24 pt-4
+               <div style={{backgroundColor : isflipcard2? "rgb(204,92,129)" : "rgb(81,55,133)" }}
+               className='w-6 h-6 transi rounded-ss-3xl bg-violet-800'></div>
+               <div style={{backgroundColor : isflipcard2? "rgb(246,101,135)" : "rgb(108,78,167)" }}
+               className='p-2 h-24 pt-4 transi
                 rounded-es-3xl rounded-tr-3xl bg-violet-600 text-white'>
                     <img src={require("../assest/united.png")} className='' width={75} alt="" />
               </div>
            </div>
             </Col>
-            <Col sm={7} md={9} lg={12}  className='my-4 position-relative lg:left-16 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '> <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard3}>
+            <Col sm={7} md={9} lg={12} 
+            onMouseEnter={()=>setisflipcard3(true)}
+            onMouseLeave={()=>setisflipcard3(false)}
+            style={{backgroundColor : isflipcard3? "rgb(39,46,57)" : "rgb(226,232,240)",
+                   color: isflipcard3? "whitesmoke": "black" }}
+             className='my-4 transition duration-300 position-relative lg:left-16 border flex rounded-s-3xl bg-slate-200'>
+            <div className='py-4 ps-2 md:p-6 '> 
+            <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard3}>
               <div className='thefrontcard'>
                 
               <p className='fw-bold'>well Knowledge</p> 
@@ -95,8 +103,10 @@ const Chooseus = () => {
             </div>
            {/* Flag creation */}
            <div className='d-flex  position-relative bottom-6 left-7'>
-               <div className='w-6 h-6 rounded-ss-3xl bg-violet-800'></div>
-               <div className='p-2 h-24 pt-4
+               <div style={{backgroundColor : isflipcard3? "rgb(204,92,129)" : "rgb(81,55,133)" }}
+               className='w-6 h-6 transi rounded-ss-3xl bg-violet-800'></div>
+               <div style={{backgroundColor : isflipcard3? "rgb(246,101,135)" : "rgb(108,78,167)" }}
+               className='p-2 transi h-24 pt-4
                 rounded-es-3xl rounded-tr-3xl violetclr text-white'>
                     <img src={require("../assest/personal-computer.png")} className='' width={75} alt="" />
               </div>
@@ -110,8 +120,14 @@ const Chooseus = () => {
                  </div>
             {/* Card section 2  */}
             <Row className='d-flex p-4 sm:p-0 align-items-center flex-column'>
-            <Col sm={7} md={9} lg={12} className='position-relative lg:right-20 border flex rounded-s-3xl my-4 bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '><ReactCardFlip flipDirection='vertical' isFlipped={isflip}>
+            <Col sm={7} md={9} lg={12} 
+            onMouseEnter={()=>setisflipcard4(true)}
+            onMouseLeave={()=>setisflipcard4(false)}
+            style={{backgroundColor : isflipcard4? "rgb(39,46,57)" : "rgb(226,232,240)",
+                   color: isflipcard4? "whitesmoke": "black" }}
+            className='transition duration-300 position-relative lg:right-20 border flex rounded-s-3xl my-4 bg-slate-200'>
+            <div className='py-4 ps-2 md:p-6 '>
+               <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard4}>
               <div className='thefrontcard'>
                 
               <p className='fw-bold'>well Knowledge</p> 
@@ -126,15 +142,23 @@ const Chooseus = () => {
             </div>
            {/* Flag creation */}
            <div className='d-flex  position-relative bottom-6 left-7'>
-               <div className='w-6 h-6 rounded-ss-3xl bg-violet-800'></div>
-               <div className='p-2 h-24 pt-4
-                rounded-es-3xl rounded-tr-3xl violetclr text-white'>
+               <div style={{backgroundColor : isflipcard4? "rgb(204,92,129)" : "rgb(81,55,133)" }}
+                className='w-6 transi h-6 rounded-ss-3xl bg-violet-800'></div>
+               <div style={{backgroundColor : isflipcard4? "rgb(246,101,135)" : "rgb(108,78,167)" }}
+               className='p-2 h-24 pt-4
+                rounded-es-3xl transi rounded-tr-3xl violetclr text-white'>
                     <img src={require("../assest/risk-management.png")} className='' width={75} alt="" />
               </div>
            </div>
             </Col>
-            <Col sm={7} md={9} lg={12} className='my-4 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '><ReactCardFlip flipDirection='vertical' isFlipped={isflip}>
+            <Col sm={7} md={9} lg={12} 
+            onMouseEnter={()=>setisflipcard5(true)}
+            onMouseLeave={()=>setisflipcard5(false)}
+            style={{backgroundColor : isflipcard5? "rgb(39,46,57)" : "rgb(226,232,240)",
+                   color: isflipcard5? "whitesmoke": "black" }}
+            className='my-4 transition duration-300 border flex rounded-s-3xl bg-slate-200'>
+            <div className='py-4 ps-2 md:p-6 '>
+               <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard5}>
               <div className='thefrontcard'>
                 
               <p className='fw-bold'>well Knowledge</p> 
@@ -149,15 +173,23 @@ const Chooseus = () => {
             </div>
            {/* Flag creation */}
            <div className='d-flex  position-relative bottom-6 left-7'>
-               <div className='w-6 h-6 rounded-ss-3xl bg-violet-800'></div>
-               <div className='p-2 h-24 pt-4
+               <div style={{backgroundColor : isflipcard5? "rgb(204,92,129)" : "rgb(81,55,133)" }}
+                className='w-6 h-6 transi rounded-ss-3xl bg-violet-800'></div>
+               <div style={{backgroundColor : isflipcard5? "rgb(246,101,135)" : "rgb(108,78,167)" }}
+               className='p-2 h-24 pt-4 transi
                 rounded-es-3xl rounded-tr-3xl violetclr text-white'>
                     <img src={require("../assest/advice.png")} className='' width={75} alt="" />
               </div>
            </div>
             </Col>
-            <Col sm={7} md={9} lg={12}  className='my-4 position-relative lg:right-20 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '><ReactCardFlip flipDirection='vertical' isFlipped={isflip}>
+            <Col sm={7} md={9} lg={12} 
+            onMouseEnter={()=>setisflipcard6(true)}
+            onMouseLeave={()=>setisflipcard6(false)}
+            style={{backgroundColor : isflipcard6? "rgb(39,46,57)" : "rgb(226,232,240)",
+                   color: isflipcard6? "whitesmoke": "black" }}
+            className='my-4 transition duration-300 position-relative lg:right-20 border flex rounded-s-3xl bg-slate-200'>
+            <div className='py-4 ps-2 md:p-6 '>
+               <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard6}>
               <div className='thefrontcard'>
                 
               <p className='fw-bold'>well Knowledge</p> 
@@ -172,9 +204,11 @@ const Chooseus = () => {
             </div>
            {/* Flag creation */}
            <div className='d-flex  position-relative bottom-6 left-7'>
-               <div className='w-6 h-6 rounded-ss-3xl bg-violet-800'></div>
-               <div className='p-2 h-24 pt-4
-                rounded-es-3xl rounded-tr-3xl violetclr text-white'>
+               <div style={{backgroundColor : isflipcard6? "rgb(204,92,129)" : "rgb(81,55,133)" }}
+               className='w-6 h-6 transi rounded-ss-3xl bg-violet-800'></div>
+               <div style={{backgroundColor : isflipcard6? "rgb(246,101,135)" : "rgb(108,78,167)" }}
+               className='p-2 h-24 pt-4
+                rounded-es-3xl transi rounded-tr-3xl violetclr text-white'>
                     <img src={require("../assest/book.png")} className='' width={75} alt="" />
               </div>
            </div>

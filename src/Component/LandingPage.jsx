@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MiniNav from './NavBar/MiniNav'
 import LogoNav from './NavBar/LogoNav'
 import MainNav from './NavBar/MainNav'
@@ -14,17 +14,26 @@ import "slick-carousel/slick/slick-theme.css";
 import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
 import Body1 from './Body1';
 import Chooseus from './Chooseus';
+import Body2Landing from './Body2Landing';
+import ContactLanding from './ContactLanding';
+import LandinBLog from './LandinBLog';
 const LandingPage = () => {
-  
+  let [anime,setanime]=useState("")
+      useEffect(()=>{
+        setanime("animate__fadeIn");
+        const element = document.querySelector('.durationani');
+        element.style.setProperty('--animate-duration', '4s');
+      },[])
   return (
-    <section id="home">
-        <MiniNav/>
-        <LogoNav/>
-        <MainNav/>
+    <section id="home" className={`${anime} animate__animated transi durationani `}>
+        
       <HomeBanner/>
       <Body1></Body1>
        <Chooseus/>
-    </section>
+       <Body2Landing/>
+       <LandinBLog/>
+       
+      </section>
   )
 }
 

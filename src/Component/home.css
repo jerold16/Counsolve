@@ -16,7 +16,6 @@
     min-height: 600px;
     /* background-size: contain; */
     background-position: end;
-
     background-image: url(../assest/banner-1.jpg);
     background-size: cover;
 }
@@ -33,6 +32,23 @@
 
     background-image: url(../assest/banner-3.jpg);
     background-size: cover;
+}
+.indsbg{
+    background-image: url(../assest/industries-bg.jpg);
+}
+.blogbg{
+    background-image: url(../assest/shape-25.png);
+    height: 600px;
+    min-height: fit-content;
+}
+
+#servicetitle{
+    height: 400px;
+    min-height: 300px;
+    background-image: url(../assest/service-title.jpg);
+    background-size: cover;
+    background-position: center;
+
 }
 .icon-three{
     border-radius: 50px 50px 0px 50px;
@@ -68,7 +84,7 @@ color: rgb(108,78,167);
     transition: 1.5s;
 }
 .cardhieght{
-    height: 380px;
+    height: 420px;
 }
 .bgbl{
     background-color: rgb(51,60,74);
@@ -95,4 +111,23 @@ color: rgb(108,78,167);
     transform: rotateY(180deg);
     width: 100%;
     height: 100%;
+}
+#selectdrop{
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#opchi{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+#opchi:hover{
+    opacity: 1;
+}
+#opchi>*{
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+#opchi:hover>*{
+    transform: translateY(0px);
 }

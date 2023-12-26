@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col,  Container,  Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "./nav.css"
 const MiniNav = () => {
+  
   return (
-    <>
+    <section id='home' className={` border-none clr`}>
            <div className='clr d-flex flex-col justify-content-lg-around  md:flex-row '>
                <div id="left-side" className='mx-6 mt-3 d-flex justify-center flex-wrap'>
                <Link className='mx-3 d- text-white-50 text-decoration-none'>
@@ -57,7 +58,7 @@ const MiniNav = () => {
                 </div>
                </div>
            </div>
-        </>
+        </section>
   )
 }
 

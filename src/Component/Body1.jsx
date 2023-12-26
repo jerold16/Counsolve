@@ -16,11 +16,9 @@ const Body1 = () => {
       var settings = {
         dots: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
         initialSlide: 0,
         infinite: true,
-        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
@@ -28,7 +26,7 @@ const Body1 = () => {
         cssEase: "linear",
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1224,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -60,6 +58,7 @@ const Body1 = () => {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
+        arrows : false,
         speed: 2000,
         autoplaySpeed: 1000,
         cssEase: "linear",
@@ -93,7 +92,7 @@ const Body1 = () => {
         ]
       };
   return (
-    <div className='vw-100'>
+    <div className=''>
         <article className='container gap-7  d-flex flex-col flex-md-row mt-4'>
               <div id='card' className='violetclr one-rounded d-flex justify-content-around ps-5 pt-8 pe-2 lg:w-2/5 '>
                     <div id='three-rounded' className='w-max h-max p-3  bg-white'>
@@ -122,17 +121,16 @@ const Body1 = () => {
         <Container className="text-center my-5">
           <p className='text-clr fs-6 sans fw-semibold'>OUR SERVICES</p>
                 <p className='display-5 fw-semibold'>Phenomenal Consulting Solutions</p>
-
         </Container>
 
 
         {/* Scroll bar for a cards */}
        <div className='container p-2  mb-5'>
                 
-                   <Slider {...settings}> 
-                    {/*Card 1  */}
-                   <div className='bg-red-300 transi  hover:border hover:border-red-300 rounded-xl'>
-                   <div id='top-rounded'className="card md:cardhieght mt-3 bg-red-300 p-3">
+                   <Slider {...settings} className=''> 
+                    {/* //card1 */}
+                   <div className='bg-red-300 transi hover:border hover:border-red-300 rounded-xl'>
+                   <div id='top-rounded'className="card cardhieght mt-3 bg-red-300 p-3">
                       <div  className='d-flex m-3'>
                       <div id="three-rounded" className='bg-red-100 w-16 h-16 p-10'>
                       </div>
@@ -146,7 +144,7 @@ const Body1 = () => {
                       </div>
                       </div>
                       
-                      <div className="card-body w-4/5">
+                      <div className="card-body lg:w-4/5">
                         
                       <Link className='text-decoration-none text-black  '>
                         <h5 className="card-title udline ">
@@ -161,9 +159,9 @@ const Body1 = () => {
                     </div>
                    </div>
 
-                   {/* Card2 */}
+                   {/* //card2 */}
                     <div className='bg-violet-100 transi hover:border hover:border-violet-300 rounded-xl'>
-                    <div id='top-rounded' className="card md:cardhieght mt-3 p-3">
+                    <div id='top-rounded' className="card cardhieght mt-3 p-3">
                       <div id='icon' className='d-flex m-3'>
                       <div id="three-rounded" className='bg-violet-100 w-16 h-16 p-10'>
                       </div>
@@ -176,21 +174,21 @@ const Body1 = () => {
                       </div>
                       </div>
                       
-                      <div className="card-body w-4/5">
+                      <div className="card-body lg:w-4/5">
                       <Link className='text-decoration-none text-black  '><h5 className="card-title udline">
                         Private Client Investment Consulting
                       </h5></Link>
                       <Link className='text-decoration-none text-black  '>
                         <p className='hover:text-violet-400 transi my-3'>Explore Service afafaf</p></Link>
-                           <p className="card-text w-4/5">
+                           <p className="card-text">
                             That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
                             </p>
                             </div>
                     </div>
                     </div>
-                    {/* Card 3 */}
+                    {/* //card3 */}
                     <div className='bg-green-300 transi hover:border hover:border-green-300 rounded-xl'>
-                    <div id="top-rounded" className="card md:cardhieght mt-3 p-3">
+                    <div id="top-rounded" className="card cardhieght mt-3 p-3">
                       <div id='icon' className='d-flex m-3'>
                       <div id="three-rounded" className='bg-green-100 w-16 h-16 p-10'>
                       </div>
@@ -204,8 +202,8 @@ const Body1 = () => {
                       </div>
                       </div>
                       
-                      <div className="card-body w-4/5">
-                      <Link className='text-decoration-none text-black  '><h5 className="card-title udline">
+                      <div className="card-body lg:w-4/5">
+                      <Link className='text-decoration-none text-black  '><h5 className="card-title udline w-4/5">
                         Retirement Plan Consultant
                       </h5></Link>
                       <Link className='text-decoration-none text-black  '>
@@ -215,9 +213,9 @@ const Body1 = () => {
                             </p> </div>
                     </div>
                     </div>
-                    {/* Card 4 */}
+                   {/* //card4 */}
                     <div className='bg-amber-300 transi hover:border hover:border-amber-300 rounded-xl'>
-                    <div id="top-rounded" className="card md:cardhieght mt-3  p-3">
+                    <div id="top-rounded" className="card cardhieght mt-3  p-3">
                     <div id='icon' className='d-flex m-3'>
                       <div id="three-rounded" className='bg-amber-100 w-16 h-16 p-10'>
                       </div>
@@ -231,8 +229,9 @@ const Body1 = () => {
                       </div>
                       </div>
                       
-                      <div className="card-body w-4/5">
-                      <Link className='text-decoration-none text-black  '><h5 className="card-title udline">
+                      <div className="card-body lg:w-4/5">
+                      <Link className='text-decoration-none text-black  '>
+                        <h5 className="card-title udline w-4/5">
                         Investment Planning
                       </h5></Link>
                       <Link className='text-decoration-none text-black  '>
@@ -242,7 +241,7 @@ const Body1 = () => {
                             </p> </div>
                     </div>
                     </div>
-                   {/* Card4 finish */}
+                   {/* //Card4 finish */}
                    
                    </Slider>  
          
@@ -251,21 +250,21 @@ const Body1 = () => {
 
      {/* Growth page */}
 
-     <div id="Growth" className='md:mt-72 bg-slate-950'>
-      <article className='container bgbl  rounded-s-3xl position-relative md:bottom-20'>
+     <div id="" className='md:mt-72  bg-slate-950'>
+      <article className='container bgbl rounded-s-3xl position-relative md:bottom-20'>
           <div className='d-flex flex-col md:flex-row'>
               <div  className='p-4  px-5'>
                   <p className='text-pink-400 text-lg'>Our Growth</p>
                   <p className='text-white fw-semibold display-5 '>Thinking
         <span className='d-block'>
-         Beyond Ordinary</span>
-Strategies</p>  <p className='text-white'>The wise man therefore always holds in these
+         Beyond Ordinary</span> Strategies</p>  
+<p className='text-white'>The wise man therefore always holds in these
 matters to this principle of selection</p>
-<button id='three-rounded' className='fs-5  btn-change fw-semibold p-3 bg-violet-700'>
+<button id='three-rounded' className='px-4 text-white  btn-change fw-semibold p-3 bg-violet-700'>
       Annual report
        </button>
               </div>
-              {/* image */}
+              {/* image heading */}
               <div  className='bgbl d-none d-xl-block h-[400px] mx-auto'>
                 <img className='d-none d-md-block position-relative bottom-28' src={require("../assest/growth-1.png")} alt="" />
                 <div id='' className='fs-5 rounded-s-3xl rounded-t-3xl text-white fw-semibold 
@@ -277,13 +276,14 @@ matters to this principle of selection</p>
       </p>
        </div>
               </div>
-              {/* card section text area*/}
+              {/* card section text area */}
             <div id="card section" className='bg-white'>
                 <div className='p-6 rounded-t-2xl rounded-s-2xl'>
                   <Link className='text-decoration-none text-black'> 
                   <h4 className='hover:text-violet-600 transi'>Golbal Impact</h4></Link>
                     <p>Ever undertakes labor physic exercise except some advantage.</p>
                     <div className='d-flex px-5 justify-between'>
+                      {/* Icon creation */}
                     <div id='icon' className='d-flex'>
                       <div id="three-rounded" className='bg-violet-100 w-8 h-8 p-9'>
                       </div>
@@ -333,7 +333,7 @@ matters to this principle of selection</p>
           </div>
       </article>
       {/* Company tags slider*/}
-      <div className='container my-5 w-fit'>
+      <div className='container my-5'>
         
       <Slider {...symbolsettings}
       className=''

@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Container, Form, Nav, NavDropdown, Navbar, Offcanvas } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'animate.css';
 import "../NavBar/nav.css"
 import "../home.css"
@@ -10,9 +10,10 @@ const MainNav = () => {
   const [navshow,setnav]=useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  let navigate =useNavigate()
   
   return (
-    <div>
+    <div className={`border-none clr`}>
          <Navbar key='lg' expand="lg" className="transi bg-body-tertiary my-3">
           <Container fluid>
             <div className=' lg:w-1/2'>
@@ -35,12 +36,12 @@ const MainNav = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="px-5 fw-semibold justify-content-start justify-content-between  flex-grow-1 pe-3">
-                  <Nav.Link href="#action1" className='display-2'>Home</Nav.Link>
-                  <Nav.Link href="#action1" className=''>About</Nav.Link>
-                  <Nav.Link href="#action1" className=''>Services</Nav.Link>
-                  <Nav.Link href="#action1" className=''>Projects</Nav.Link>
-                  <Nav.Link href="#action1" className=''>Blog</Nav.Link>
-             <Nav.Link href="#action1">Contact</Nav.Link>
+                  <Nav.Link onClick={()=>navigate("/")} className='display-2'>Home</Nav.Link>
+                  <Nav.Link onClick={()=>navigate("/about")} className=''>About</Nav.Link>
+                  <Nav.Link onClick={()=>navigate("/service")} className=''>Services</Nav.Link>
+                  <Nav.Link onClick={()=>navigate("/project")} className=''>Projects</Nav.Link>
+                  <Nav.Link onClick={()=>navigate("/blogs")} className=''>Blog</Nav.Link>
+                  <Nav.Link onClick={()=>navigate("/contact")}>Contact</Nav.Link>
                   
                 </Nav>
                 

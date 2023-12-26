@@ -1,7 +1,10 @@
 import React from 'react'
 import { Carousel, Col, Image, Row } from 'react-bootstrap'
 import "./home.css"
+import MainNav from './NavBar/MainNav'
+import { useNavigate } from 'react-router'
 const HomeBanner = () => {
+  let navigate=useNavigate()
   return (
     <div>
         <Carousel fade className=''>
@@ -50,7 +53,7 @@ const HomeBanner = () => {
                 <p className='text-2xl md:text-7xl fw-bold'>Ideas for <span className='block-color'> your Better  </span>Investment </p>
                 <p className='text-xl md:text-2xl'>The moment, so blinded by desire,that they cannot 
                 forsee and trouble that are bound to ensure </p>
-                <button id='three-rounded' className='fs-5 float-right btn-change d-none d-md-block fw-semibold h-14 w-44 bg-violet-700'>
+                <button id='three-rounded' className='px-4 float-right btn-change d-none d-md-block fw-semibold h-14 w-44 bg-violet-700'>
       Service & plans
        </button>
         </div>
@@ -84,7 +87,7 @@ const HomeBanner = () => {
              claims of duty obligations of business it will frequently occur that.
              </p>
        
-        <button id='three-rounded' className='fs-5 btn-change d-none d-md-block fw-semibold h-14 w-48 bg-violet-700'>
+        <button id='three-rounded' onClick={()=>navigate("/about")} className='fx-4 text-white btn-change d-none d-md-block fw-semibold h-14 w-48 bg-violet-700'>
       More About Us
        </button> 
      </div>
