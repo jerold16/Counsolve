@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router';
 
 const Pagination = (props) => {
     const {data} =props;
+    console.log(data);
     const [itemOffset, setItemOffset] = useState(0);
     const [currentItems,setcurrentItems]=useState([]);
     const [pageCount,setPageCount] =useState(0);
@@ -30,10 +31,10 @@ const Pagination = (props) => {
                     return(
                         <div className="rounded w-[300px] md:w-[400px] mx-auto position-relative transi border-2 p-3 py-3">
                            
-                            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'>{item.category}</p>
+                            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'>{item.Category}</p>
                             <div className='position-relative'>
                             <Image  className='d-block w-[100%] rounded-s-3xl rounded-t-3xl' 
-                             src={item.url} alt='missing'>
+                             src={item.img} alt='missing'>
                              </Image>
                              <div id='opchi' className='position-absolute rounded-t-3xl rounded-s-3xl flex p-10 align-items-end ali justify-end left-0 top-0 w-[100%] h-[100%] '>
                                    <p className='bg-white rounded-t-3xl h-fit rounded-s-3xl w-fit p-2'>
@@ -43,7 +44,7 @@ const Pagination = (props) => {
                                    </p>
                             </div>
                             </div>
-                            <p className='text-3xl mt-2'>{item.title} , {item.id}</p>
+                            <p className='text-3xl mt-2'>{item.Main_Title} , {item.id}</p>
                             <p onClick={()=>{
                                         navigate(`/blog/${item.id}`)
                                     }} className='cursor-pointer hover:text-violet-700 fw-semibold '>Explore more <KeyboardArrowRight/></p>

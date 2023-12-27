@@ -1,32 +1,48 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import TitleBanner from './TitleBanner'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Image, Row } from 'react-bootstrap'
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 import { Business } from '@mui/icons-material'
+import axios from 'axios'
 
 const BlogDetails = () => {
-    const {id} = useParams()
-    console.log(typeof id);
+    const {id} = useParams();
     let b="business"; let ino="innovative"; let fi="financial plan";
     let i="investment"; let c="consulting"; let ma="management";
     let navigate=useNavigate()
     let [anime,setanime]=useState("")
+    let [boolean, setboolean] =useState(false)
+    let [blog,setblog]=useState({})
     useEffect(()=>{
         setanime("animate__fadeIn");
         const element = document.querySelector('.durationani');
         element.style.setProperty('--animate-duration', '4s');
+        const fetch =()=>{
+            axios.get(`http://192.168.0.122:9000/api/blog/${id}/`)
+        .then((response)=>{
+            setblog(response.data); 
+            setboolean(true)   
+        })
+        .catch((err)=>{
+              console.log(err);
+        })
+        }
+        fetch()
       },[])
+      console.log(blog);
   return (
     <div className={`${anime} animate__animated transi durationani`}>
-        <TitleBanner data={"hellw"}/>
+        <TitleBanner data={blog.Main_Title}/>
         <h2 className='h-20'></h2>
         <Row className='container justify-around mx-auto mb-20'>
             <Col lg={7}>
-            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'><img className='inline mx-3' src={require("../assest/e7b9b29c4fdd4d4ec28699064fe80204.png")} alt="" /> Investment</p>
+            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'><img className='inline mx-3' src={require("../assest/e7b9b29c4fdd4d4ec28699064fe80204.png")} alt="" /> 
+            {blog.Category}</p>
          <div className='flex'>   
          <p className='h-fit w-fit p-2 px-4 text-3xl flex  justify-content-center align-items-center
-          bg-slate-900 text-white rounded-s-3xl rounded-t-3xl m-3'>I</p>
+          bg-slate-900 text-white rounded-s-3xl rounded-t-3xl m-3'>
+            {boolean && blog.Main_Title[0]}</p>
             <p className='text-slate-600'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta nobis nihil accusamus! Deserunt consequatur eligendi porro totam! A error quis 
                 eveniet quisquam rerum, deserunt doloremque voluptas? Iure, ex dicta?
@@ -36,7 +52,7 @@ const BlogDetails = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta nobis nihil accusamus! Deserunt consequatur eligendi porro totam! A error quis 
                 eveniet quisquam rerum, deserunt doloremque voluptas? Iure, ex dicta?
             </p>
-            <img src={require("../assest/news-25.jpg")} alt="" />
+            <Image src={blog.img} alt="" />
             <p className='text-xl md:text-3xl fw-semibold my-10'>Business And Inaguration</p>
             <p className='text-slate-600'>Extremely painful or again is there anyone who loves or case pursues or desires these cases dislike perfectlys imple and to distinguish.</p>
             <p className='text-black'>We keep ourselves up to make your dreams come true,</p>

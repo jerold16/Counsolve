@@ -199,6 +199,7 @@ const Blogs = () => {
              axios.get("http://192.168.0.122:9000/api/blog/")
              .then((response)=>{
                  console.log(response.data);
+                 setblogs(response.data)
              })
              .catch((err)=>{
                  console.log(err);
@@ -211,7 +212,7 @@ const Blogs = () => {
         <TitleBanner data={"Blogs"}/>
         {/* Grid View */}
         <h1 className='h-20'></h1>
-        <Pagination data={bogs}/>
+        <Pagination data={webblogs}/>
         {/* Belive us */}
 
        <BeliveUs/>
