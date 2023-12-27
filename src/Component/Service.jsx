@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import MiniNav from './NavBar/MiniNav'
+import MiniNav from '../NavBar/MiniNav'
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 import { useNavigate } from 'react-router'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import BeliveUs from './BeliveUs'
+import TitleBanner from './TitleBanner'
+import { ArrowUpward, KeyboardDoubleArrowUp } from '@mui/icons-material'
+import PeopleTrust from './PeopleTrust'
+import Solutions from './Solutions'
 const Service = () => {
     let navigate=useNavigate()
     var settings = {
@@ -47,6 +51,19 @@ const Service = () => {
           }
         ]
       };
+      var twoiconsetting = {
+        dots: true,
+        speed: 500,
+        arrows:false,
+        slidesToShow: 1,
+        initialSlide: 0,
+        infinite: true,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 1500,
+        cssEase: "linear"
+      }
       let [anime,setanime]=useState("")
       useEffect(()=>{
         setanime("animate__fadeIn");
@@ -55,15 +72,46 @@ const Service = () => {
       },[])
   return (
     <section id='' className={`${anime} animate__animated transi durationani `}>
-        <div id='head' className='position-relative transi'>
-            <div id="servicetitle" className='d-block' alt="" ></div>
-             <p style={{backgroundColor :"rgba(0,0,0,0.5)"}} 
-             className='position-absolute text-white text-5xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
-                Services</p>
-                <p 
-             className='position-absolute text-white text-xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-end  justify-start p-5'>
-                <a onClick={()=>navigate("/")} className='cursor-pointer no-underline text-white hover:underline'>Home</a> <KeyboardArrowRight/> Services</p>
-        </div>
+        <TitleBanner data={"services"}/>
+        {/* About us */}
+           <h1 className='h-20'></h1>
+        <Row className='container  w-fit mx-auto justify-between my-20'>
+          <Col  lg={6} className='flex position-relative flex-col flex-lg-row lg:gap-6 align-items-center'>
+            <img className='d-block my-4' src={require("../assest/about-3.jpg")} alt="" />
+            <img src={require("../assest/about-2.jpg")} alt="" />
+             <div id='three-rounded' className='lg:absolute my-4 left-36  bg-violet-700 p-3 w-[250px] h-[200px] text-white'>
+              <img className='w-16 h-16 m-3' src={require("../assest/icon-7.png")} alt="" />
+             <p className='text-lg'> <span className='text-2xl block'>6.8 Million</span>
+                 Customer Benefits
+                 </p>
+             </div>
+          </Col>
+          <Col lg={5}>
+            <p className='text-violet-500 md:text-xl fw-semibold'>About us</p>
+            <p className='text-2xl fw-semibold lg:text-4xl'>Experts in Providing Investment Consulting</p>
+            <p className='text-slate-600'>
+            Perfectly simple & easy to distinguish. In a free hour all, when our power of choice is untrammelled & when nothing prevents our being able to what we like best, every pleasure is to be welcomed & every pain 
+            avoided but in certain have to repudiated all annoyances accepted.
+            </p>
+            <Slider {...twoiconsetting} className='w-2/5 mx-auto'  >
+               <div>
+                <img className='w-20 h-20 my-4' src={require("../assest/world-book-day.png")} alt="" />
+                <p className='text-xl'>Extensive knowledge</p>
+                <p className='text-slate-600'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, rem officiis sapiente quidem
+                </p>
+               </div>
+               <div>
+                <img className='w-20 h-20 my-4' src={require("../assest/world-book-day.png")} alt="" />
+                <p className='text-xl'>Extensive knowledge</p>
+                <p className='text-slate-600'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, rem officiis sapiente quidem
+                </p>
+               </div>
+               
+            </Slider>
+          </Col>
+        </Row>
         {/* Our services */}
         <Container style={{backgroundColor :"rgb(39,46,57)"}} className="text-center my-5 py-5 rounded-3xl">
           <p className='text-pink-600 fs-6 sans fw-semibold'>OUR SERVICES</p>
@@ -72,7 +120,7 @@ const Service = () => {
                 
                    <Slider {...settings} className=''> 
                     {/* //card1 */}
-                   <div className='bg-red-300 transi hover:border my-3 hover:border-red-300 rounded-xl'>
+                   <div className='bg-red-300 text-start transi hover:border my-3 hover:border-red-300 rounded-xl'>
                    <div id='top-rounded'className="card cardhieght mt-3 bg-red-300 p-3">
                       <div  className='d-flex m-3'>
                       <div id="three-rounded" className='bg-red-100 w-16 h-16 p-10'>
@@ -103,7 +151,7 @@ const Service = () => {
                    </div>
 
                    {/* //card2 */}
-                    <div className='bg-violet-100 my-3 transi hover:border hover:border-violet-300 rounded-xl'>
+                    <div className='bg-violet-100 text-start my-3 transi hover:border hover:border-violet-300 rounded-xl'>
                     <div id='top-rounded' className="card cardhieght mt-3 p-3">
                       <div id='icon' className='d-flex m-3'>
                       <div id="three-rounded" className='bg-violet-100 w-16 h-16 p-10'>
@@ -130,7 +178,7 @@ const Service = () => {
                     </div>
                     </div>
                     {/* //card3 */}
-                    <div className='bg-green-300 my-3 transi hover:border hover:border-green-300 rounded-xl'>
+                    <div className='bg-green-300 my-3 text-start transi hover:border hover:border-green-300 rounded-xl'>
                     <div id="top-rounded" className="card cardhieght mt-3 p-3">
                       <div id='icon' className='d-flex m-3'>
                       <div id="three-rounded" className='bg-green-100 w-16 h-16 p-10'>
@@ -157,7 +205,7 @@ const Service = () => {
                     </div>
                     </div>
                    {/* //card4 */}
-                    <div className='bg-amber-300 my-3 transi hover:border hover:border-amber-300 rounded-xl'>
+                    <div className='bg-amber-300 my-3 transi hover:border text-start hover:border-amber-300 rounded-xl'>
                     <div id="top-rounded" className="card cardhieght mt-3  p-3">
                     <div id='icon' className='d-flex m-3'>
                       <div id="three-rounded" className='bg-amber-100 w-16 h-16 p-10'>
@@ -190,11 +238,8 @@ const Service = () => {
          
        </div>
         </Container>
-        {/* Our Clients */}
-        <div style={{backgroundColor :"rgb(108,78,167)"}} className='text-center'>
-                <p className='text-white fw-semibold'>OUR CLIENTS</p>
-                <p className='text-white text-5xl fw-semibold'>People Who Trusted Us</p>
-        </div>
+        <Solutions/>
+        <PeopleTrust/>
         <BeliveUs/>
     </section>
   )

@@ -144,6 +144,7 @@ const AboutsUS = () => {
           }
         ]
       };
+      
   return (
     <div className={`${tanime} animate__animated transi durationanit `}>
         <div id='head' className='position-relative transi'>
@@ -250,7 +251,7 @@ const AboutsUS = () => {
                         <img className='rounded-t-3xl rounded-s-3xl mt-5 lg:relative  left-64 bottom-56' src={require("../assest/skills-2.jpg")} alt="" />
                     </div>
                 </Col>
-               <Col lg={6}>
+               <Col lg={6} className=''>
                 <p className='text-violet-700 fw-semibold'>OUR SKILLS</p>
                 <p className='fw-semibold md:text-5xl text-3xl'>
                 We keep ourselves
@@ -277,7 +278,20 @@ up to make your Dreams come true
                     Complete account of the syste all expound the teachings.
                     </p>
                 </div>
-                
+                <div className='flex'>
+                    <div className='flex'>
+                    <img className='w-8 h-8 me-2' src={require("../assest/check-mark.png")} alt="" />
+
+                        <p className='ms-4 text-2xl fw-semibold w-4/5 text-slate-900'>
+                     Personal Consulting Service
+                     <a href="" className='text-decoration-none block text-lg text-slate-600 hover:text-violet-700'>Explore Projects</a>
+                     
+                     </p>
+                    </div>
+                    <p className='text-slate-600 w-2/5'>
+                    Complete account of the syste all expound the teachings.
+                    </p>
+                </div>
                </Col>
              </Row>
              {/* Skills ends */}
@@ -342,7 +356,7 @@ up to make your Dreams come true
 
     </div>
         {/* ends */}
-
+         
         {/* <OurTeam/> */}
         <BeliveUs/>
     </div>

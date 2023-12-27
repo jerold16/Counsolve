@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel, Col, Image, Row } from 'react-bootstrap'
 import "./home.css"
-import MainNav from './NavBar/MainNav'
+import MainNav from '../NavBar/MainNav'
 import { useNavigate } from 'react-router'
 const HomeBanner = () => {
   let navigate=useNavigate()
@@ -19,7 +19,7 @@ const HomeBanner = () => {
                 <p className='text-xl md:text-2xl'>
                     The moment so blinded by desire ,that they cannot forsee and trouble
                     that are bound to ensure</p>
-                <button id='three-rounded' className='fs-5 float-right btn-change d-none d-md-block fw-semibold h-14 w-44 bg-violet-700'>
+                <button id='three-rounded' onClick={()=>navigate("/service")} className='fs-5 float-right btn-change d-none d-md-block fw-semibold h-14 w-44 bg-violet-700'>
       Service & plans
        </button>
         </div></Carousel.Caption>

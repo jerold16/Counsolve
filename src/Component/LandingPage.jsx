@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import MiniNav from './NavBar/MiniNav'
-import LogoNav from './NavBar/LogoNav'
-import MainNav from './NavBar/MainNav'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
 import 'animate.css';
-import "../Component/NavBar/nav.css"
+import "../NavBar/nav.css"
 import "../Component/home.css"
 import { Card, Carousel, Col, Container, Row } from 'react-bootstrap';
 import HomeBanner from './HomeBanner';

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import 'animate.css';
-import "../Component/NavBar/nav.css";
+import "../NavBar/nav.css";
 import "../Component/home.css";
 import { Card, Carousel, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

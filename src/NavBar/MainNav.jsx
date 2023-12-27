@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Button, Container, Form, Nav, NavDropdown, Navbar, Offcanvas } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom';
 import 'animate.css';
-import "../NavBar/nav.css"
-import "../home.css"
 const MainNav = () => {
   
   const [show, setShow] = useState(false);
@@ -30,18 +28,24 @@ const MainNav = () => {
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                 <div className='mx-auto mx-sm-0'>
-                <img src="https://wp1.themevibrant.com/newwp/counsolve/wp-content/uploads/2023/05/logo-4.png" alt="logo" />
+                <img src="../assest/comlogowhite.png" alt="logo" />
              </div>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="px-5 fw-semibold justify-content-start justify-content-between  flex-grow-1 pe-3">
-                  <Nav.Link onClick={()=>navigate("/")} className='display-2'>Home</Nav.Link>
-                  <Nav.Link onClick={()=>navigate("/about")} className=''>About</Nav.Link>
-                  <Nav.Link onClick={()=>navigate("/service")} className=''>Services</Nav.Link>
-                  <Nav.Link onClick={()=>navigate("/project")} className=''>Projects</Nav.Link>
-                  <Nav.Link onClick={()=>navigate("/blogs")} className=''>Blog</Nav.Link>
-                  <Nav.Link onClick={()=>navigate("/contact")}>Contact</Nav.Link>
+                  <Nav.Link onClick={()=>{navigate("/");setnav(false) }} className='display-2'>Home</Nav.Link>
+                  <Nav.Link><div className="drpdown">
+   <button className="drpbtn">About</button>
+  <div className="drpdown-content transi">
+    <Nav.Link onClick={()=>{navigate("/about");setnav(false) }} className='text-decoration-none text-slate-600'>About Us</Nav.Link>
+    <Nav.Link onClick={()=>{navigate("/ourteam");setnav(false) }} className='text-decoration-none text-slate-600' >Our Team</Nav.Link>
+  </div>
+</div></Nav.Link>
+                  <Nav.Link onClick={()=>{navigate("/service");setnav(false) }} className=''>Services</Nav.Link>
+                  <Nav.Link onClick={()=>{navigate("/project");setnav(false) }} className=''>Projects</Nav.Link>
+                  <Nav.Link onClick={()=>{navigate("/blogs");setnav(false) }} className=''>Blog</Nav.Link>
+                  <Nav.Link onClick={()=>{navigate("/contact");setnav(false) }}>Contact</Nav.Link>
                   
                 </Nav>
                 
@@ -59,7 +63,7 @@ const MainNav = () => {
                   />
                 </Form>
                 <button className='mx-2 bg-inherit'  onClick={handleShow}>
-                <img src="https://wp1.themevibrant.com/newwp/counsolve/wp-content/themes/counsolve/assets/images/icons/icon-4.png" alt="Awesome Image"/>
+                <img src={require("../assest/navicon.png")} alt="Awesome Image"/>
                  </button>
             </div>
           </Container>
@@ -71,7 +75,7 @@ const MainNav = () => {
         <Offcanvas.Header closeButton className=''>
           <Offcanvas.Title>
           <div className='mx-auto mx-sm-0'>
-             <img src="https://wp1.themevibrant.com/newwp/counsolve/wp-content/uploads/2023/05/logo.png" alt="logo"/>
+             <img src="../assest/logo.png" alt="logo"/>
              </div>
           </Offcanvas.Title>
           </Offcanvas.Header>

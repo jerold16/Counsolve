@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../Component/NavBar/nav.css"
+import "../NavBar/nav.css"
 import "./home.css"
 import { Col, Image, Row } from 'react-bootstrap'
 import ReactCardFlip from 'react-card-flip'
