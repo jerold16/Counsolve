@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { Col, Image, Row } from 'react-bootstrap'
 import Slider from 'react-slick';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const LandinBLog = () => {
     let [display,setdisplay]=useState(false)
+    let navigate=useNavigate()
     var settings = {
         speed: 500,
         initialSlide: 0,
@@ -115,7 +116,7 @@ const LandinBLog = () => {
                     className='position-absolute rounded-3xl d-flex align-items-end transi  p-3 md:p-5 justify-center top-0 left-0 w-[100%] h-[100%]'>
                         <div id='three-rounded'  className='bg-slate-100 py-3 rounded-t-3xl rounded-s-3xl w-full mp-3 px-4'>
                         <p className='text-violet-600'>{obj.category}</p>
-                        <button className= 'lg:text-xl text-slate-900 transi text-start py-2 hover:text-violet-600'>
+                        <button onClick={()=>navigate(`/project/${obj.title}`)} className= 'lg:text-xl text-slate-900 transi text-start py-2 hover:text-violet-600'>
                             {obj.title}</button>
                         </div>
                     </div>

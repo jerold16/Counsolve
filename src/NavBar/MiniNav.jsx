@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import { Col,  Container,  Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./nav.css"
 const MiniNav = () => {
-  
+  let navigate=useNavigate()
   return (
     <section id='home' className={` border-none clr`}>
            <div className='clr d-flex flex-col justify-content-lg-around  md:flex-row '>
                <div id="left-side" className='mx-6 mt-3 d-flex justify-center flex-wrap'>
-               <Link className='mx-3 d- text-white-50 text-decoration-none'>
+               <Link onClick={()=>navigate("/blogs")}
+               className='mx-3 d- text-white-50 text-decoration-none'>
                 <p className=' display-3 text-mini  font-thin'>News & Media</p>
                 </Link>
 
-                <Link className='mx-3 text-white-50 text-decoration-none'>
+                <Link onClick={()=>navigate("/ourteam")}
+                className='mx-3 text-white-50 text-decoration-none'>
                 <p className=' display-3 text-mini font-thin'>Investors </p>
                 </Link>
                 <Link className='mx-3 text-white-50 text-decoration-none'>
                 <p className='display-3 text-mini font-thin'>Downloads </p>
                 </Link>
-                <Link className='mx-3 text-white-50 text-decoration-none'>
+                <Link onClick={()=>navigate("/contact")}
+                className='mx-3 text-white-50 text-decoration-none'>
                 <p className=' display-3 text-mini font-thin'>Career</p>
                 </Link>
                </div>

@@ -4,6 +4,11 @@ import { useNavigate } from 'react-router'
 import BeliveUs from './BeliveUs'
 import { Card, Container } from 'react-bootstrap'
 import Slider from 'react-slick'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import TitleBanner from './TitleBanner'
+import ContactLanding from './ContactLanding'
 
 const OurTeam = () => {
   var settings = {
@@ -55,16 +60,10 @@ const OurTeam = () => {
       },[])
   return (
     <div className={`${anime} animate__animated transi durationani `}>
-    <div id='head' className='position-relative transi'>
-        <div id="servicetitle" className='d-block' alt="" ></div>
-         <p style={{backgroundColor :"rgba(0,0,0,0.5)"}} 
-         className='position-absolute text-white text-5xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
-            Our Team</p>
-            <p 
-         className='position-absolute text-white text-xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-end  justify-start p-5'>
-            <a onClick={()=>navigate("/")} className='cursor-pointer no-underline text-white hover:underline'>Home</a> 
-            <KeyboardArrowRight/> Our Team</p>
-    </div>
+      <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+   <TitleBanner data={"Our Team"}/>
     <Container className='mx-auto my-20'>
       <p className='text-clr fw-semibold ms-3'>LEADERSHIP</p>
       <p className='text-5xl fw-semibold'>Team Behind Company</p>
@@ -122,6 +121,7 @@ const OurTeam = () => {
       <p className='text-lg transi hover:text-violet-700 text-center cursor-pointer'>View All Members <KeyboardArrowRight/> </p>
     </Container>
     <BeliveUs/>
+    <ContactLanding/>
 </div>
 
   )

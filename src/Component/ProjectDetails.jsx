@@ -3,6 +3,10 @@ import { Col, Row } from 'react-bootstrap'
 import TitleBanner from './TitleBanner'
 import { useNavigate, useParams } from 'react-router'
 import { KeyboardArrowRight } from '@mui/icons-material'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import ContactLanding from './ContactLanding'
 
 const ProjectDetails = () => {
     let {name}=useParams()
@@ -13,15 +17,20 @@ const ProjectDetails = () => {
     useEffect(()=>{
         setanime("animate__fadeIn");
         const element = document.querySelector('.durationani');
-        element.style.setProperty('--animate-duration', '4s');
+        element.style.setProperty('--animate-duration', '2s');
+        setTimeout(() => {
+            setanime("")
+        }, 2000);
       },[])
   return (
     <div className={`${anime} animate__animated transi durationani `}>
+        <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
     <TitleBanner data={name}/>
     <h2 className='h-20'></h2>
-    <Row className='container justify-around mx-auto mb-20'>
-        
-        <Col lg={4} className='mx-auto d-none d-lg-block mt-5'>
+    <Row className='container justify-around mx-auto mb-20'>       
+        <Col lg={4} className='mx-auto mt-5'>
             {/* project information */}
            <div className='p-5 text-white rounded-t-3xl rounded-s-3xl bg-violet-600'>
                <p className='text-white text-4xl w-4/5'>Project information</p>
@@ -108,6 +117,7 @@ const ProjectDetails = () => {
            
         </Col>   
     </Row>
+    <ContactLanding/>
 </div>
   )
 }

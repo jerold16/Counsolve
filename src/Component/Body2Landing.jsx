@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Body2Landing = () => {
+    let navigate =useNavigate()
     let content = [
         {
             "id":1,
@@ -85,10 +86,9 @@ const Body2Landing = () => {
                         content.map((con)=>{
                             return(
                                 <div className='w-10/12'>
-                                    <button className='w-100 text-start '
-                                    onClick={()=>changecontent(con.id)}>
-                                    <hr className='text-white-50' />
-                                        <p className='text-lg md:text-2xl text-white-50 '>{con.title}</p>
+                                    <button 
+                                    className='w-100 focus:text-slate-950 focus:bg-slate-50 rounded-t-3xl p-2 pt-3 my-2 focus:rounded-s-3xl border-bottom text-slate-50 text-start '>
+                                        <p  onClick={()=>changecontent(con.id)} className='text-lg md:text-2xl'>{con.title}</p>
                                     </button>   
                                 </div>
                             )
@@ -117,7 +117,7 @@ const Body2Landing = () => {
                             )
                         })
                     }
-                    <button id='three-rounded' className='px-4  btn-change text-white fw-semibold p-3 bg-violet-700'>
+                    <button id='three-rounded' onClick={()=>{navigate(`/service/${title}`)}} className='px-4  btn-change text-white fw-semibold p-3 bg-violet-700'>
                    Explore More
        </button>
                     </div>

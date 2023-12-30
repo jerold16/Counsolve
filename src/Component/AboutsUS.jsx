@@ -5,6 +5,11 @@ import { useNavigate } from 'react-router'
 import OurTeam from './OurTeam'
 import Slider from 'react-slick'
 import BeliveUs from './BeliveUs'
+import TitleBanner from './TitleBanner'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import ContactLanding from './ContactLanding'
 
 const AboutsUS = () => {
     let navigate =useNavigate()
@@ -147,16 +152,10 @@ const AboutsUS = () => {
       
   return (
     <div className={`${tanime} animate__animated transi durationanit `}>
-        <div id='head' className='position-relative transi'>
-            <div id="servicetitle" className='d-block' alt="" ></div>
-             <p style={{backgroundColor :"rgba(0,0,0,0.5)"}} 
-             className='position-absolute text-white text-5xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
-                About us</p>
-                <p 
-             className='position-absolute text-white text-xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-end  justify-start p-5'>
-                <a onClick={()=>navigate("/")} className='cursor-pointer no-underline text-white hover:underline'>Home</a> 
-                <KeyboardArrowRight/> About us</p>
-        </div>
+        <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+        <TitleBanner data={"About Company"}/>
         {/* About us starts */}
         <div className='h-20'></div>
         <Row className='container mx-auto my-20'>
@@ -167,7 +166,7 @@ const AboutsUS = () => {
                     <p className='text-slate-900 text-xl fw-semibold my-4'>Service Since 2015</p>
                     <p className='text-slate-500 text-lg sm:w-3/5'>Equal blame belongs to those who fail in their duty through weakness of will, which is the all same as saying
                          through shrinking from toil and pain these cases are perfectly.</p>
-                         <button id='three-rounded' className='px-4 my-4 btn-change text-white fw-semibold p-3 bg-violet-700'>
+                         <button id='three-rounded' onClick={()=>navigate("/ourteam")} className='px-4 my-4 btn-change text-white fw-semibold p-3 bg-violet-700'>
                    Our History
        </button>
             </Col>
@@ -359,6 +358,7 @@ up to make your Dreams come true
          
         {/* <OurTeam/> */}
         <BeliveUs/>
+        <ContactLanding/>
     </div>
   )
 }

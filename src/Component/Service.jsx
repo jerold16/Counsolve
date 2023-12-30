@@ -10,6 +10,9 @@ import TitleBanner from './TitleBanner'
 import { ArrowUpward, KeyboardDoubleArrowUp } from '@mui/icons-material'
 import PeopleTrust from './PeopleTrust'
 import Solutions from './Solutions'
+import MainNav from '../NavBar/MainNav'
+import LogoNav from '../NavBar/LogoNav'
+import ContactLanding from './ContactLanding'
 const Service = () => {
     let navigate=useNavigate()
     var settings = {
@@ -72,7 +75,10 @@ const Service = () => {
       },[])
   return (
     <section id='' className={`${anime} animate__animated transi durationani `}>
-        <TitleBanner data={"services"}/>
+      <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+        <TitleBanner data={"Services"}/>
         {/* About us */}
            <h1 className='h-20'></h1>
         <Row className='container  w-fit mx-auto justify-between my-20'>
@@ -241,6 +247,7 @@ const Service = () => {
         <Solutions/>
         <PeopleTrust/>
         <BeliveUs/>
+        <ContactLanding/>
     </section>
   )
 }

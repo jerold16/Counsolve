@@ -7,7 +7,7 @@ const HomeBanner = () => {
   let navigate=useNavigate()
   return (
     <div>
-        <Carousel fade className=''>
+        <Carousel fade className='z-0'>
       <Carousel.Item interval={1000}
        id="crsimg">
         {/* <img src={require(`../assest/banner-1.jpg`)}
@@ -29,7 +29,6 @@ const HomeBanner = () => {
       {/* <img src={require(`../assest/banner-2.jpg`)}
       id="crsimg"
       className='background' alt="" /> */}
-
         <Carousel.Caption className=''> 
         <div className='md:w-3/5 lg:w-1/2 text-black'>
                 <p className='text-2xl md:text-7xl fw-bold'>Business <span className='block-color2'> & Individual </span> Consulting!... </p>
@@ -67,22 +66,22 @@ const HomeBanner = () => {
     <div id='experience' className='lg:w-1/2 mx-auto my-2'>
                     <Image src={require(`../assest/about-1.jpg`)}></Image>
                  </div>
-         <div id='aboutus' className='lg:w-1/2 '>
+         <div id='aboutus' className='lg:w-1/2 fontfam'>
             <p className='fs-5 text-violet-700 fw-semibold'>About us</p>
-             <p className='fw-semibold w-4/5 text-xl lg:text-5xl line display-5 '>
+             <p className='fw-semibold w-4/5 text-xl lg:text-5xl fontfam line display-5 '>
              Experts in Providing Investment Consulting Services
              </p>
-             <p className='fs-5 d-flex align-items-center '> 
-             <svg xmlns="http://www.w3.org/2000/svg" className='mx-2' width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+             <p className='fs-5 d-flex align-items-center fw-bold '> 
+             <svg xmlns="http://www.w3.org/2000/svg" className='me-2' width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg>
               Investment Strategy Development  </p> 
-             <p className='fs-5 d-flex align-items-center '>
-             <svg xmlns="http://www.w3.org/2000/svg" className='mx-2' width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+             <p className='fs-5 d-flex align-items-center fw-bold'>
+             <svg xmlns="http://www.w3.org/2000/svg" className='me-2' width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg> Risk Management</p>
             
-             <p className='display-6 fs-3'>
+             <p className='text-lg mulish text-slate-500'>
              Every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the 
              claims of duty obligations of business it will frequently occur that.
              </p>
@@ -94,8 +93,8 @@ const HomeBanner = () => {
 
     </div>
     {/* About ending */}
-    
-  </div>
+    <video src=""></video>
+   </div>
   )
 }
 

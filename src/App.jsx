@@ -18,13 +18,12 @@ import OurTeam from './Component/OurTeam';
 import ProjectDetails from './Component/ProjectDetails';
 import Catogeries from './Component/Catogeries';
 import ServicesDivision from './Component/ServicesDivision';
+import MainNavBar from './Component/MainNavBar';
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-      <MiniNav/>
-        <LogoNav/>
-        <MainNav/>
+      {/* <MainNavBar/> */}
            <Routes>
                <Route path='/*' element={<LandingPage/>}></Route>
                <Route path='/service/*' element={<Service/>}/>
@@ -38,7 +37,6 @@ const App = () => {
                <Route path='/catogery/:catogery' element={<Catogeries/>}/>
                <Route path='/service/:service' element={<ServicesDivision/>}/>
            </Routes>
-           <ContactLanding/>
       </BrowserRouter>
     </div>
   )

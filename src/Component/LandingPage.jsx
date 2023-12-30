@@ -17,6 +17,7 @@ import Chooseus from './Chooseus';
 import Body2Landing from './Body2Landing';
 import ContactLanding from './ContactLanding';
 import LandinBLog from './LandinBLog';
+import MainNavBar from './MainNavBar';
 const LandingPage = () => {
   let [anime,setanime]=useState("")
       useEffect(()=>{
@@ -26,13 +27,16 @@ const LandingPage = () => {
       },[])
   return (
     <section id="home" className={`${anime} animate__animated transi durationani `}>
-        
+        <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+        {/* <MainNavBar/> */}
       <HomeBanner/>
       <Body1></Body1>
        <Chooseus/>
        <Body2Landing/>
        <LandinBLog/>
-       
+       <ContactLanding/>
       </section>
   )
 }

@@ -5,6 +5,11 @@ import BeliveUs from './BeliveUs'
 import Slider from 'react-slick'
 import { Image } from 'react-bootstrap'
 import ReactPaginate from 'react-paginate'
+import TitleBanner from './TitleBanner'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import ContactLanding from './ContactLanding'
 
 const Project = () => {
     let navigate=useNavigate()
@@ -75,16 +80,10 @@ const Project = () => {
     };
   return (
     <div className={`${anime} animate__animated transi durationani `}>
-        <div id='head' className='position-relative transi'>
-            <div id="servicetitle" className='d-block' alt="" ></div>
-             <p style={{backgroundColor :"rgba(0,0,0,0.5)"}} 
-             className='position-absolute text-white text-5xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
-                Projects</p>
-                <p 
-             className='position-absolute text-white text-xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-end  justify-start p-5'>
-                <a onClick={()=>navigate("/")} className='cursor-pointer no-underline text-white hover:underline'>Home</a> 
-                <KeyboardArrowRight/> Projects</p>
-        </div>
+        <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+        <TitleBanner data={"Projects"}/>
 
         <>
          <div className={`flex ${anime} animate__animated transi durationani  flex-wrap mx-auto mt-3  container gap-3 justify-between`}>
@@ -133,6 +132,7 @@ const Project = () => {
         {/* Belive us */}
         <BeliveUs/>
 {/* Bielive us ends */}
+<ContactLanding/>
     </div>
   )
 }

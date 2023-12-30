@@ -5,6 +5,10 @@ import BeliveUs from './BeliveUs'
 import Pagination from './Pagination'
 import TitleBanner from './TitleBanner'
 import axios from 'axios'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import ContactLanding from './ContactLanding'
 
 const Blogs = () => {
     let navigate=useNavigate()
@@ -209,6 +213,9 @@ const Blogs = () => {
       },[])
   return (
     <div className={`${anime} animate__animated transi durationani `}>
+        <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
         <TitleBanner data={"Blogs"}/>
         {/* Grid View */}
         <h1 className='h-20'></h1>
@@ -216,7 +223,8 @@ const Blogs = () => {
         {/* Belive us */}
 
        <BeliveUs/>
-       
+       {/*  */}
+       <ContactLanding/>
     </div>
   )
 }

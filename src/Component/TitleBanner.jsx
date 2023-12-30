@@ -10,7 +10,7 @@ const TitleBanner = (props) => {
         <div id='head' className='position-relative transi'>
             <div id="servicetitle" className='d-block' alt="" ></div>
              <p style={{backgroundColor :"rgba(0,0,0,0.5)"}} 
-             className='position-absolute text-white text-5xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
+             className='position-absolute text-white text-3xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
              {props.data}
              </p>
                 <p 

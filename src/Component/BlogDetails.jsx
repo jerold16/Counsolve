@@ -5,73 +5,83 @@ import { Col, Image, Row } from 'react-bootstrap'
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 import { Business } from '@mui/icons-material'
 import axios from 'axios'
-
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import ContactLanding from './ContactLanding'
 const BlogDetails = () => {
     const {id} = useParams();
-    let b="business"; let ino="innovative"; let fi="financial plan";
-    let i="investment"; let c="consulting"; let ma="management";
     let navigate=useNavigate()
     let [anime,setanime]=useState("")
     let [boolean, setboolean] =useState(false)
-    let [blog,setblog]=useState({})
+    let [blog,setblog]=useState({})  
+    let [poiints,setpoints]=useState(["No points updated"])
     useEffect(()=>{
         setanime("animate__fadeIn");
         const element = document.querySelector('.durationani');
-        element.style.setProperty('--animate-duration', '4s');
+        element.style.setProperty('--animate-duration','4s');
         const fetch =()=>{
-            axios.get(`http://192.168.0.122:9000/api/blog/${id}/`)
+            axios.get(`http://192.168.0.122:9000/data/${id}`)
         .then((response)=>{
-            setblog(response.data); 
-            setboolean(true)   
+            setblog(response.data);
+            setboolean(true);
+            setpoints(response.data.points);
         })
         .catch((err)=>{
+            console.log("hellow");
               console.log(err);
         })
         }
         fetch()
-      },[])
+      },[id])
       console.log(blog);
+      let p1=""+blog.Paragraph1;
+      let po1=p1.slice(0,p1.indexOf(".")+1)
+      let po2=p1.slice(p1.indexOf(".")+1)
+      console.log(poiints);
   return (
     <div className={`${anime} animate__animated transi durationani`}>
-        <TitleBanner data={blog.Main_Title}/>
+      <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+          <TitleBanner data={blog.Main_Title}/>
         <h2 className='h-20'></h2>
         <Row className='container justify-around mx-auto mb-20'>
             <Col lg={7}>
-            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'><img className='inline mx-3' src={require("../assest/e7b9b29c4fdd4d4ec28699064fe80204.png")} alt="" /> 
+            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'>
+                <img className='inline mx-3' src={require("../assest/e7b9b29c4fdd4d4ec28699064fe80204.png")} alt="" /> 
             {blog.Category}</p>
          <div className='flex'>   
          <p className='h-fit w-fit p-2 px-4 text-3xl flex  justify-content-center align-items-center
           bg-slate-900 text-white rounded-s-3xl rounded-t-3xl m-3'>
             {boolean && blog.Main_Title[0]}</p>
             <p className='text-slate-600'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta nobis nihil accusamus! Deserunt consequatur eligendi porro totam! A error quis 
-                eveniet quisquam rerum, deserunt doloremque voluptas? Iure, ex dicta?
+                {po1}
             </p>
         </div>
-            <p className='text-slate-600'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta nobis nihil accusamus! Deserunt consequatur eligendi porro totam! A error quis 
-                eveniet quisquam rerum, deserunt doloremque voluptas? Iure, ex dicta?
+            <p className='text-slate-600'>{po2}
             </p>
             <Image src={blog.img} alt="" />
-            <p className='text-xl md:text-3xl fw-semibold my-10'>Business And Inaguration</p>
-            <p className='text-slate-600'>Extremely painful or again is there anyone who loves or case pursues or desires these cases dislike perfectlys imple and to distinguish.</p>
-            <p className='text-black'>We keep ourselves up to make your dreams come true,</p>
+            <p className='text-xl md:text-4xl fontfam fw-bolder my-10'>{blog.Sub_Title} </p>
+            <p className='text-slate-600 mulish'>{blog.Paragraph2} </p>
+            <p className='text-black fontfam fw-bolder text-xl '>{blog.Heading}</p>
             <div className='flex flex-wrap'>
-                <p className='text-slate-600 w-1/2 flex'> <KeyboardArrowRight className='text-violet-800'/> <p> Who the Arre you taking Belongs to those who fail.</p> </p>
-                <p className='text-slate-600 w-1/2 flex'> <KeyboardArrowRight className='text-violet-800'/> <p> Who the Arre you taking Belongs to those who fail.</p> </p>
-                <p className='text-slate-600 w-1/2 flex'> <KeyboardArrowRight className='text-violet-800'/> <p> Who the Arre you taking Belongs to those who fail.</p> </p>
-                <p className='text-slate-600 w-1/2 flex'> <KeyboardArrowRight className='text-violet-800'/> <p> Who the Arre you taking Belongs to those who fail.</p> </p>
-                <p className='text-slate-600 w-1/2 flex'> <KeyboardArrowRight className='text-violet-800'/> <p> Who the Arre you taking Belongs to those who fail.</p> </p>
-
+                {
+                     poiints.map((data,index)=>{
+                        return(
+                <p className='text-slate-600 w-1/2 flex'> 
+                <KeyboardArrowRight className='text-violet-800'/> 
+                <p>{data.point} </p> </p>                          
+                        )
+                    })
+                }
 
             </div>
             {/* highlights */}
             <div className='p-4 rounded-t-3xl flex rounded-s-3xl bg-slate-800'>
                 <img className='w-16 mx-auto my-auto h-16' src={require("../assest/quote (1).png")} alt="" />
                 <div className='p-4 text-white text-xl'>
-                      <p>
-                      Contrary to popular belief, lorem ipsum is not simply random It has roots in a piece 
-                      of classical Latin literature from 45 BC, making it over 2000 years old.
+                      <p className='fontfam fw-bold'>{blog.Highlight}
                       </p>
                 </div>
             </div>
@@ -98,32 +108,32 @@ const BlogDetails = () => {
        </button>
         </form>
             </Col>   
-            <Col lg={4} className='mx-auto d-none d-lg-block mt-5'>
+            <Col lg={4} className='mx-auto mt-5'>
                 <div className='bg-slate-100 shadow my-4 rounded-s-3xl rounded-t-3xl p-4 mx-auto'>
                     <p className='text-xl text-center fw-semibold my-2'>Categories</p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${b}`)
+                        navigate(`/catogery/business`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Business </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${c}`)
+                        navigate(`/catogery/consulting`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Consulting </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${fi}`)
+                        navigate(`/catogery/financial`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Financial plan </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${ino}`)
+                        navigate(`/catogery/innovative`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Innovative </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${i}`)
+                        navigate(`/catogery/Investment`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Investment </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${ma}`)
+                        navigate(`/catogery/management`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Management </p>
                 </div>
                 <div className='bg-slate-100 shadow rounded-s-3xl rounded-t-3xl p-4 mx-auto'>
@@ -160,6 +170,7 @@ const BlogDetails = () => {
                 </div>
             </Col>
         </Row>
+        <ContactLanding/>
     </div>
   )
 }

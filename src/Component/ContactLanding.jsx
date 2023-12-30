@@ -67,32 +67,32 @@ United States.
                <p className='text-2xl fw-semibold'>Company</p>
                <hr />
                <div className='text-slate-400'>
-                <Link hrefLang='#home' className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/"} hrefLang='#home' className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Home
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/about"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> About us
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/blogs"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Grid view
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Services
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/ourteam"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Our team
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/contact"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Contact
                 </p>
@@ -103,32 +103,32 @@ United States.
                <p className='text-2xl fw-semibold'>Essentials</p>
                <hr />
                <div className='text-slate-400'>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service/Advanced Tech"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Advanced Tech
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service/Banking and Finance"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Banking and finance
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service/Submit reports"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Submit reports
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service/Independent"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Independent
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service/Manufacturing"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Manufacturing
                 </p>
                 </Link>
-                <Link className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
+                <Link to={"/service/Market Research"} className='text-decoration-none text-slate-500 transi hover:text-violet-600'>
                 <p className=''>
                    <KeyboardArrowRightIcon /> Market Research
                 </p>
@@ -155,7 +155,7 @@ United States.
                Here are some tips Giving Back Interested in this year?
                </Link>
               </div>
-              <Link className=' text-lg text-decoration-none text-slate-800 hover:text-violet-700  fw-semibold'>
+              <Link to={"/blogs"} className=' text-lg text-decoration-none text-slate-800 hover:text-violet-700  fw-semibold'>
               View all post <KeyboardArrowRightIcon/></Link>
             </Col>
           </Row>

@@ -131,7 +131,12 @@ color: rgb(108,78,167);
 #opchi:hover>*{
     transform: translateY(0px);
 }
-
+.fontfam{
+     font-family: 'Urbanist', sans-serif;
+}
+.mulish{
+font-family: 'Mulish', sans-serif;
+}
 .pagination{
     list-style: none;
     text-decoration: none;

@@ -2,8 +2,12 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import TitleBanner from './TitleBanner'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Image, Row } from 'react-bootstrap'
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
+import MainNav from '../NavBar/MainNav'
+import LogoNav from '../NavBar/LogoNav'
+import MiniNav from '../NavBar/MiniNav'
+import ContactLanding from './ContactLanding'
 
 const Catogeries = () => {
     let navigate =useNavigate();
@@ -18,72 +22,82 @@ const Catogeries = () => {
         }, 2000);
         console.log(anime);
       },[catogery])
-    let b="business"; let ino="innovative"; let fi="financial plan";
-    let i="investment"; let c="consulting"; let ma="management";
     let title = catogery[0].toUpperCase()+catogery.slice(1);
     let [datas,setdatas]=useState([])
+    let [show,setshow] =useState(false)
     useEffect(()=>{
-        axios.get(`http://192.168.0.122:9000/data/${catogery}`)
+        axios.get(`http://192.168.0.122:9000/datas/${catogery}/`)
         .then((response)=>{
             console.log(response.data);
             setdatas(response.data);
+            setshow(true)
         })
         .catch((err)=>{
             console.log(err);
         })
+          
     },[catogery])
+     console.log(datas);
   return (
     <div className={`${anime} animate__animated transi durationani `} >
+        <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
           <TitleBanner data={title}/>
           <h2 className='h-20'></h2>
         <Row className='container justify-around mx-auto mb-20'>
-            <Col lg={7}>
-           <div className='border-2 shadow rounded-3xl p-4'>
+        <Col lg={7}>
+           {show ? 
+            datas.map((data)=>{
+                return(
+                    <div className='border-2 shadow rounded-3xl my-4 p-4'>
            <p className='rounded-s-3xl rounded-t-3xl bg-slate-100 text-clr w-fit p-2 capitalize'><img className='inline mx-3' src={require("../assest/e7b9b29c4fdd4d4ec28699064fe80204.png")} alt="" />
-             Investment</p>
+             {data.Category}</p>
          <div className='flex'>   
-         <p className='h-fit w-fit p-2 px-4 text-3xl flex  justify-content-center align-items-center
-          bg-slate-900 text-white rounded-s-3xl rounded-t-3xl m-3'>I</p>
+         {/* <p className='h-fit w-fit p-2 px-4 text-3xl flex  justify-content-center align-items-center
+          bg-slate-900 text-white rounded-s-3xl rounded-t-3xl m-3'>
+           </p> */}
             <p className='text-slate-600'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta nobis nihil accusamus! Deserunt consequatur eligendi porro totam! A error quis 
-                eveniet quisquam rerum, deserunt doloremque voluptas? Iure, ex dicta?
+                {data.Paragraph1}
             </p>
         </div>
-            <img src={require("../assest/news-25.jpg")} alt="" />
-           
-            <button onClick={()=>{
-                navigate("/blogs")
-            }} className='hover:text-violet-600 flex gap-3 text-xl my-8 transi fw-semibold'>
+            {/* <img src={require("../assest/news-25.jpg")} alt="" /> */}
+           <Image className='mx-auto' src={data.img}></Image>
+       <button onClick={()=>navigate(`/blog/${data.slug}`)}
+             className='hover:text-violet-600 flex gap-3 text-xl my-8 transi fw-semibold'>
                 Explore More</button>
            </div>
-                
+                )
+            }) : 
+            <p className='h1 mx-auto'>Sorry no Data is Present in this category Now! Check for Other categories!! </p>
+           }       
             </Col>   
-            <Col lg={4} className='mx-auto d-none d-lg-block mt-5'>
+            <Col lg={4} className='mx-auto mt-5'>
                 <div className='bg-slate-100 shadow my-4 rounded-s-3xl rounded-t-3xl p-4 mx-auto'>
                     <p className='text-xl text-center fw-semibold my-2'>Categories</p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${b}`)
+                        navigate(`/catogery/business`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Business </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${c}`)
+                        navigate(`/catogery/consulting`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Consulting </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${fi}`)
+                        navigate(`/catogery/financial plan`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Financial plan </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${ino}`)
+                        navigate(`/catogery/innovative`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Innovative </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${i}`)
+                        navigate(`/catogery/Investment`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Investment </p>
                     <hr />
                     <p onClick={()=>{
-                        navigate(`/catogery/${ma}`)
+                        navigate(`/catogery/management`)
                     }} className="hover:text-violet-600 cursor-pointer"><KeyboardArrowRight/> Management </p>
                 </div>
                 <div className='bg-slate-100 shadow rounded-s-3xl rounded-t-3xl p-4 mx-auto'>
@@ -120,6 +134,7 @@ const Catogeries = () => {
                 </div>
             </Col>
         </Row>
+        <ContactLanding/>
     </div>
   )
 }

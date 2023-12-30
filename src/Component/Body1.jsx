@@ -4,11 +4,13 @@ import 'animate.css';
 import "../NavBar/nav.css";
 import "../Component/home.css";
 import { Card, Carousel, Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 const Body1 = () => {
+  let navigate=useNavigate()
     let sysarry=[
         "clients-1.png","clients-2.png","clients-3.png","clients-4.png","clients-5.png",
         "clients-6.png","clients-7.png","clients-8.png","clients-10.png"
@@ -110,17 +112,18 @@ const Body1 = () => {
 </svg>
                     </div>
                     <div id='text' className=''>
-                         <p className='text-2xl  fw-bold'>Start Your Project</p>
-                         <p className=''>The claims of duty obligationsbusiness frequently occur.</p>
-                         <Link className='text-bold fw-bold   text-decoration-none text-black'>
-                          Free Consultation</Link>
+                         <p onClick={()=>navigate("/project/Investing in Emerging Markets")}
+                         className='text-2xl lg:text-3xl fontfam cursor-pointer hover:text-violet-600 fw-bolder transi'>Start Your Project</p>
+                         <p className='mulish fw-semibold text-slate-600'>The claims of duty obligationsbusiness frequently occur.</p>
+                         <Link className='fw-semibold text-lg cursor-pointer hover:text-violet-600 text-decoration-none transi text-slate-900'>
+                          Free Consultation <KeyboardArrowRight/></Link>
                     </div>
               </div>
         </article>
         {/* Our services */}
         <Container className="text-center my-5">
           <p className='text-clr fs-6 sans fw-semibold'>OUR SERVICES</p>
-                <p className='display-5 fw-semibold'>Phenomenal Consulting Solutions</p>
+                <p className='display-5 fontfam fw-bolder'>Phenomenal Consulting Solutions</p>
         </Container>
 
 
@@ -146,13 +149,16 @@ const Body1 = () => {
                       
                       <div className="card-body lg:w-4/5">
                         
-                      <Link className='text-decoration-none text-black  '>
-                        <h5 className="card-title udline ">
+                      <Link to={("/service/Private Client Investment Management")} 
+                       className='text-decoration-none text-black  '>
+                        <h5 className="card-title text-2xl fontfam fw-bolder text-blackudline ">
                         Private Client Investment Management
                       </h5></Link>
-                      <Link className='text-decoration-none text-black  '>
-                        <p className='hover:text-red-400 transi my-3'>Explore Service afafaf</p></Link>
-                           <p className="card-text">
+                      <Link to={("/service/Private Client Investment Management")} 
+                      className='text-decoration-none text-black  '>
+                        <p className='hover:text-red-400 fontfam text-lg fw-bolder transi my-3'>
+                          Explore Service</p></Link>
+                           <p className="card-text text-slate-700 text-[15px] lg:text-[17px] mulish">
                             That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
                             </p>
                         </div>
@@ -175,12 +181,15 @@ const Body1 = () => {
                       </div>
                       
                       <div className="card-body lg:w-4/5">
-                      <Link className='text-decoration-none text-black  '><h5 className="card-title udline">
+                      <Link to={("/service/Private Client Investment Management")} 
+                       className='text-decoration-none  text-black  '>
+                        <h5 className="card-title text-2xl fontfam fw-bolder udline">
                         Private Client Investment Consulting
                       </h5></Link>
-                      <Link className='text-decoration-none text-black  '>
-                        <p className='hover:text-violet-400 transi my-3'>Explore Service afafaf</p></Link>
-                           <p className="card-text">
+                      <Link to={("/service/Private Client Investment Management")}  className='text-decoration-none text-black  '>
+                        <p className='hover:text-violet-400 fontfam text-lg fw-bolder transi my-3'>
+                          Explore Service</p></Link>
+                           <p className="card-text  text-slate-700 text-[15px] lg:text-[17px] mulish">
                             That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
                             </p>
                             </div>
@@ -203,12 +212,16 @@ const Body1 = () => {
                       </div>
                       
                       <div className="card-body lg:w-4/5">
-                      <Link className='text-decoration-none text-black  '><h5 className="card-title udline w-4/5">
+                      <Link to={("/service/Retirement Plan Consultant")}
+                       className='text-decoration-none  text-black  '>
+                        <h5 className="card-title text-2xl fontfam fw-bolder udline w-4/5">
                         Retirement Plan Consultant
                       </h5></Link>
-                      <Link className='text-decoration-none text-black  '>
-                        <p className='hover:text-green-400 transi my-3'>Explore Service afafaf</p></Link>
-                           <p className="card-text">
+                      <Link  to={("/service/Retirement Plan Consultant")}
+                      className='text-decoration-none text-black  '>
+                        <p className='hover:text-green-400 fontfam text-lg fw-bolder transi my-3'>
+                          Explore Service</p></Link>
+                           <p className="card-text  text-slate-700 text-[15px] lg:text-[17px] mulish">
                             That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
                             </p> </div>
                     </div>
@@ -230,13 +243,16 @@ const Body1 = () => {
                       </div>
                       
                       <div className="card-body lg:w-4/5">
-                      <Link className='text-decoration-none text-black  '>
-                        <h5 className="card-title udline w-4/5">
+                      <Link  to={("/service/Investment Planning")}
+                      className='text-decoration-none text-black  '>
+                        <h5 className="card-title text-2xl fontfam fw-bolder  udline w-4/5">
                         Investment Planning
                       </h5></Link>
-                      <Link className='text-decoration-none text-black  '>
-                        <p className='hover:text-amber-400 transi my-3'>Explore Service afafaf</p></Link>
-                           <p className="card-text">
+                      <Link to={("/service/Investment Planning")}
+                      className='text-decoration-none text-black  '>
+                        <p className='hover:text-amber-400 fontfam text-lg fw-bolder transi my-3'>
+                          Explore Service</p></Link>
+                           <p className="card-text text-slate-700 text-[15px] lg:text-[17px] mulish">
                             That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
                             </p> </div>
                     </div>
@@ -255,12 +271,12 @@ const Body1 = () => {
           <div className='d-flex flex-col md:flex-row'>
               <div  className='p-4  px-5'>
                   <p className='text-pink-400 text-lg'>Our Growth</p>
-                  <p className='text-white fw-semibold display-5 '>Thinking
+                  <p className='text-white fontfam fw-semibold display-5 '>Thinking
         <span className='d-block'>
          Beyond Ordinary</span> Strategies</p>  
-<p className='text-white'>The wise man therefore always holds in these
+<p className='text-slate-400 text-lg mulish'>The wise man therefore always holds in these
 matters to this principle of selection</p>
-<button id='three-rounded' className='px-4 text-white  btn-change fw-semibold p-3 bg-violet-700'>
+<button id='three-rounded' onClick={()=>navigate("/about")} className='px-4 text-white  btn-change fw-semibold p-3 bg-violet-700'>
       Annual report
        </button>
               </div>
@@ -280,8 +296,8 @@ matters to this principle of selection</p>
             <div id="card section" className='bg-white'>
                 <div className='p-6 rounded-t-2xl rounded-s-2xl'>
                   <Link className='text-decoration-none text-black'> 
-                  <h4 className='hover:text-violet-600 transi'>Golbal Impact</h4></Link>
-                    <p>Ever undertakes labor physic exercise except some advantage.</p>
+                  <h4 className='hover:text-violet-600 fw-bolder text-3xl fontfam transi'>Golbal Impact</h4></Link>
+                    <p className='mulish text-slate-600'>Ever undertakes labor physic exercise except some advantage.</p>
                     <div className='d-flex px-5 justify-between'>
                       {/* Icon creation */}
                     <div id='icon' className='d-flex'>
@@ -307,9 +323,9 @@ matters to this principle of selection</p>
                 <div className='p-3'>
                   
                 <Link className='text-decoration-none text-black'> 
-                  <h4 className='hover:text-violet-600 transi'>Corporate Sustainability</h4></Link>
+                  <h4 className='hover:text-violet-600 fw-bolder text-3xl fontfam transi'>Corporate Sustainability</h4></Link>
                   
-                    <p>Ever undertakes labor physic exercise except some advantage.</p>
+                    <p className='mulish text-slate-600'>Ever undertakes labor physic exercise except some advantage.</p>
                     <div className='d-flex px-5 justify-between'>
                     <div id='icon' className='d-flex justify-content-between'>
                       <div id="three-rounded" className='bg-violet-100 w-8 h-8 p-9'>

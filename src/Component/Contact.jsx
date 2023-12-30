@@ -2,6 +2,11 @@ import { KeyboardArrowRight } from '@mui/icons-material'
 import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router'
+import TitleBanner from './TitleBanner'
+import MiniNav from '../NavBar/MiniNav'
+import LogoNav from '../NavBar/LogoNav'
+import MainNav from '../NavBar/MainNav'
+import ContactLanding from './ContactLanding'
 
 const Contact = () => {
     let navigate=useNavigate()
@@ -13,16 +18,10 @@ const Contact = () => {
     },[])
   return (
     <section id='' className={`${anime} animate__animated transi durationani `}>
-        <div id='head' className='position-relative transi'>
-            <div id="servicetitle" className='d-block' alt="" ></div>
-             <p style={{backgroundColor :"rgba(0,0,0,0.5)"}} 
-             className='position-absolute text-white text-5xl md:text-7xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-center  justify-center'>
-                Contact</p>
-                <p 
-             className='position-absolute text-white text-xl fw-semibold left-0 top-0 w-[100%] h-[100%] flex align-items-end  justify-start p-5'>
-                <a onClick={()=>navigate("/")} className='cursor-pointer no-underline text-white hover:underline'>Home</a> 
-                <KeyboardArrowRight/> Services</p>
-        </div>
+      <MiniNav/>
+        <LogoNav/>
+        <MainNav/>
+       <TitleBanner data={"Contact"}/>
         {/* Contact form */}
         <div className=' py-20 bg-slate-100'>
           <Row className='container flex justify-around mx-auto'>
@@ -179,6 +178,7 @@ Send Your Message</p>
             </Col>
            </Row>
         </div>
+        <ContactLanding/>
         </section>
   )
 }

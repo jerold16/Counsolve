@@ -13,8 +13,9 @@ const Chooseus = () => {
   return (
     <div className='mt-10'>
         <p className='h-10'></p>
-        <p className='text-center text-violet-700 fw-bold' >WHY CHOOSE US</p>
-        <p className='text-center md:text-5xl p-3 text-4xl  fw-medium text-black'>Reason For Choose Counsolve</p>
+        <p className='text-center text-violet-700 fontfam fw-bolder' >WHY CHOOSE US</p>
+        <p className='text-center md:text-5xl p-3 text-4xl fontfam   fw-bolder text-black'>
+         Reason For Choose Counsolve</p>
            <article className="p-3 d-flex flex-column flex-lg-row  container">
            {/* Card section 1 */}
            <Row className='d-flex flex-column justify-center align-items-center p-4 '>
@@ -29,7 +30,7 @@ const Chooseus = () => {
             <ReactCardFlip flipDirection='vertical' isFlipped={isflip}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bold'>well Knowledge</p> 
+              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
@@ -60,7 +61,7 @@ const Chooseus = () => {
               <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard2}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bold'>well Knowledge</p> 
+              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
@@ -91,7 +92,7 @@ const Chooseus = () => {
             <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard3}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bold'>well Knowledge</p> 
+              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
@@ -130,7 +131,7 @@ const Chooseus = () => {
                <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard4}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bold'>well Knowledge</p> 
+              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
@@ -161,7 +162,7 @@ const Chooseus = () => {
                <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard5}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bold'>well Knowledge</p> 
+              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
@@ -192,7 +193,7 @@ const Chooseus = () => {
                <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard6}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bold'>well Knowledge</p> 
+              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
