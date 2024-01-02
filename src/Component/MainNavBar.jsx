@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Form, Offcanvas } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const MainNavBar = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  
+   let navigate =useNavigate()
   return (
     <div className='head'>
         <input type="checkbox" id='menu-bar' />
@@ -20,8 +20,8 @@ const MainNavBar = () => {
                  <li><Link href="">Home</Link></li>
                  <li><Link href="">About</Link>
                  <ul>
-                    <li><Link href="">About Comapny</Link></li>
-                    <li><Link href="">Our Team</Link></li>
+                    <li><Link >About Comapny</Link></li>
+                    <li><Link to={"/ourteam"}>Our Team</Link></li>
                  </ul>
                  </li>
                  <li><Link href="">Service</Link>

@@ -17,10 +17,12 @@
     /* background-size: contain; */
     background-position: end;
     background-image: url(../assest/banner-1.jpg);
+    background-color: rgba(0,0,0,.7);
     background-size: cover;
 }
 #crsimg2{
     min-height: 600px;
+
     /* background-size: contain; */
     background-image: url(../assest/banner-2.jpg);
     background-position: end;
@@ -29,9 +31,13 @@
 #crsimg3{
     min-height: 600px;
     /* background-size: contain; */
-
     background-image: url(../assest/banner-3.jpg);
     background-size: cover;
+}
+@media (min-width:1040px) {
+    #crsimg ,#crsimg2,#crsimg3{
+        height: 90vh;
+    }
 }
 .indsbg{
     background-image: url(../assest/industries-bg.jpg);
@@ -136,6 +142,10 @@ color: rgb(108,78,167);
 }
 .mulish{
 font-family: 'Mulish', sans-serif;
+}
+select option{
+   font-family: 'Mulish',sans-serif;
+   font-weight: 500;
 }
 .pagination{
     list-style: none;

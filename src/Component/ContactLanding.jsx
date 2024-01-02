@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 const ContactLanding = () => {
+   let cp= "(OPC) Pvt.Ltd"
   return (
     <div>
         
@@ -12,10 +13,10 @@ const ContactLanding = () => {
         <div className='h-10'></div>
           <Row className=''>
             <Col lg={6}>
-              <img src={require("../assest/logo.png")} alt="" />
+              <img width={130} src={require("../assest/png-01.png")} alt="" />
               <p className='my-3 text-lg fw-semibold'>
               Copyright © 2023 
-              <Link className='text-clr text-decoration-none'><span className='hover:underline fw-semibold text-lg font-sans'> Consolve.</span>
+              <Link className='text-clr text-decoration-none'><span className='hover:underline fw-semibold text-lg font-sans'> Merida Tech Minds {cp} .</span>
                  </Link> All Rights Reserved.
               </p>
               <p className='text-slate-600 text-lg'>
@@ -54,12 +55,10 @@ const ContactLanding = () => {
 than 16 Countries
               </p>
               <p className='text-lg fw-semibold'>Head Office</p>
-              <p className='text-lg md:w-4/5 text-slate-500'>
-              280 Granite Run Drive Suite
-Hobert, LA 90010,
-United States.
-              </p>
-              <Link className='text-decoration-none flex gap-2 text-lg fw-semibold text-slate-900 transi hover:text-violet-600'>
+              <p className=' mulish md:w-4/5 text-slate-500'>
+       <span className='text-black text-base fw-semibold mulish'>   Merida Tech Minds {cp}</span>  <span className='block'> 20-2 ,Keshava Krupa Building 2nd Floor, 30th cross, 10th Main Rd, 4th Block, Jayanagar, Bengaluru, Karnataka 560011
+           </span>  </p>
+              <Link target='_block' to='https://g.co/kgs/vgDdWeC' className='text-decoration-none flex gap-2 text-lg fw-semibold text-slate-900 transi hover:text-violet-600'>
                 <img width={30} src={require('../assest/map.png')} alt="" />
                 Google map</Link>
             </Col>

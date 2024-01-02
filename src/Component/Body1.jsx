@@ -152,15 +152,15 @@ const Body1 = () => {
                       <Link to={("/service/Private Client Investment Management")} 
                        className='text-decoration-none text-black  '>
                         <h5 className="card-title text-2xl fontfam fw-bolder text-blackudline ">
-                        Private Client Investment Management
+                       Software Consulting
                       </h5></Link>
-                      <Link to={("/service/Private Client Investment Management")} 
+                      <Link to={("/service/Software Consulting")} 
                       className='text-decoration-none text-black  '>
                         <p className='hover:text-red-400 fontfam text-lg fw-bolder transi my-3'>
-                          Explore Service</p></Link>
-                           <p className="card-text text-slate-700 text-[15px] lg:text-[17px] mulish">
-                            That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
-                            </p>
+                          Explore Service</p></Link>        
+                           <p className="card-text text-slate-700 text-[15px] lg:text-[17px] mulish">        
+                       We offer expert guidance to optimise your software solutions, streamline processes, and enhance overall 
+efficiency.</p>
                         </div>
                     </div>
                    </div>
@@ -184,14 +184,14 @@ const Body1 = () => {
                       <Link to={("/service/Private Client Investment Management")} 
                        className='text-decoration-none  text-black  '>
                         <h5 className="card-title text-2xl fontfam fw-bolder udline">
-                        Private Client Investment Consulting
+                        Branding
                       </h5></Link>
-                      <Link to={("/service/Private Client Investment Management")}  className='text-decoration-none text-black  '>
+                      <Link to={("/service/Branding")}  className='text-decoration-none text-black  '>
                         <p className='hover:text-violet-400 fontfam text-lg fw-bolder transi my-3'>
                           Explore Service</p></Link>
-                           <p className="card-text  text-slate-700 text-[15px] lg:text-[17px] mulish">
-                            That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
-                            </p>
+                           <p className="card-text  text-slate-700 text-[15px] lg:text-[17px] mulish">                          
+Let us guide you in creating a lasting 
+impression that speaks volumes about your values and vision. </p>
                             </div>
                     </div>
                     </div>
@@ -215,15 +215,14 @@ const Body1 = () => {
                       <Link to={("/service/Retirement Plan Consultant")}
                        className='text-decoration-none  text-black  '>
                         <h5 className="card-title text-2xl fontfam fw-bolder udline w-4/5">
-                        Retirement Plan Consultant
+                        Digital Marketing
                       </h5></Link>
-                      <Link  to={("/service/Retirement Plan Consultant")}
+                      <Link  to={("/service/Digital Marketing")}
                       className='text-decoration-none text-black  '>
                         <p className='hover:text-green-400 fontfam text-lg fw-bolder transi my-3'>
                           Explore Service</p></Link>
-                           <p className="card-text  text-slate-700 text-[15px] lg:text-[17px] mulish">
-                            That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
-                            </p> </div>
+                           <p className="card-text  text-slate-700 text-[15px] lg:text-[17px] mulish">                        
+We offer expert guidance to optimise your software solutions, streamline processes, and enhance overall efficiency.   </p> </div>
                     </div>
                     </div>
                    {/* //card4 */}
@@ -246,15 +245,14 @@ const Body1 = () => {
                       <Link  to={("/service/Investment Planning")}
                       className='text-decoration-none text-black  '>
                         <h5 className="card-title text-2xl fontfam fw-bolder  udline w-4/5">
-                        Investment Planning
+                        Business Consulting
                       </h5></Link>
-                      <Link to={("/service/Investment Planning")}
+                      <Link to={("/service/Business Consulting")}
                       className='text-decoration-none text-black  '>
                         <p className='hover:text-amber-400 fontfam text-lg fw-bolder transi my-3'>
                           Explore Service</p></Link>
-                           <p className="card-text text-slate-700 text-[15px] lg:text-[17px] mulish">
-                            That they cannot forsee the pain trouble that are bound ensure equal blame belongs to duty.
-                            </p> </div>
+                           <p className="card-text text-slate-700 text-[15px] lg:text-[17px] mulish">                        
+We collaborate with you to identify opportunities, overcome challenges, and implement effective strategies.</p> </div>
                     </div>
                     </div>
                    {/* //Card4 finish */}

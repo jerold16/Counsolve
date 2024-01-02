@@ -82,7 +82,7 @@ const Service = () => {
         {/* About us */}
            <h1 className='h-20'></h1>
         <Row className='container  w-fit mx-auto justify-between my-20'>
-          <Col  lg={6} className='flex position-relative flex-col flex-lg-row lg:gap-6 align-items-center'>
+          <Col  xl={6} className='flex mx-auto position-relative flex-col flex-lg-row lg:gap-6 align-items-center'>
             <img className='d-block my-4' src={require("../assest/about-3.jpg")} alt="" />
             <img src={require("../assest/about-2.jpg")} alt="" />
              <div id='three-rounded' className='lg:absolute my-4 left-36  bg-violet-700 p-3 w-[250px] h-[200px] text-white'>
@@ -92,7 +92,7 @@ const Service = () => {
                  </p>
              </div>
           </Col>
-          <Col lg={5}>
+          <Col xl={5}>
             <p className='text-violet-500 md:text-xl fw-semibold'>About us</p>
             <p className='text-2xl fw-semibold lg:text-4xl'>Experts in Providing Investment Consulting</p>
             <p className='text-slate-600'>

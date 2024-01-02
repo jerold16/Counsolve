@@ -241,7 +241,7 @@ const LandinBLog = () => {
                       <img width={25} src={require("../assest/twitter.png")} alt="" />
                       </Link>
                       <Link>
-                      <img width={25} src={require("../assest/linkedin.png")} alt="" />
+                      <img  width={25} src={require("../assest/linkedin.png")} alt="" />
                       </Link>
                  </div>
                  </div>

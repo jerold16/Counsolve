@@ -13,7 +13,8 @@ const Chooseus = () => {
   return (
     <div className='mt-10'>
         <p className='h-10'></p>
-        <p className='text-center text-violet-700 fontfam fw-bolder' >WHY CHOOSE US</p>
+        <p className='text-center text-violet-700 text-xl fontfam fw-bolder'>
+         WHY CHOOSE US</p>
         <p className='text-center md:text-5xl p-3 text-4xl fontfam   fw-bolder text-black'>
          Reason For Choose Counsolve</p>
            <article className="p-3 d-flex flex-column flex-lg-row  container">
@@ -26,17 +27,17 @@ const Chooseus = () => {
                    color: isflip? "whitesmoke": "black" }}
             className='transition duration-300 position-relative lg:left-16 border flex rounded-s-3xl my-4
              bg-slate-200'>
-            <div className=' py-4  ps-2 md:p-6'>
+            <div className=' py-4 w-[100%] h-[220px] sm:h-[180px]  ps-2 md:p-6'>
             <ReactCardFlip flipDirection='vertical' isFlipped={isflip}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
-                
-              <p className=' fw-bold'>hellow Knowledge</p> 
-                 <p>Foresee the pain trouble all that  rationanl encounter</p>
+{/*                 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
+                 <p>Foresee the pain trouble all that  rationanl encounter</p> */}
               </div>
               </ReactCardFlip>
             </div>
@@ -57,16 +58,16 @@ const Chooseus = () => {
             style={{backgroundColor : isflipcard2? "rgb(39,46,57)" : "rgb(226,232,240)",
                    color: isflipcard2? "whitesmoke": "black" }}
             className='my-4 transition duration-300 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '>
+            <div className='py-4 w-[100%] h-[220px] sm:h-[180px]  ps-2 md:p-6 '>
               <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard2}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
                 
-              <p className=' fw-bold'>hellow Knowledge</p> 
+              <p className=' fw-bolder text-xl fontfam'>hellow Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               </ReactCardFlip>
@@ -88,16 +89,16 @@ const Chooseus = () => {
             style={{backgroundColor : isflipcard3? "rgb(39,46,57)" : "rgb(226,232,240)",
                    color: isflipcard3? "whitesmoke": "black" }}
              className='my-4 transition duration-300 position-relative lg:left-16 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '> 
+            <div className='py-4 w-[100%] h-[220px] sm:h-[180px] ps-2 md:p-6 '> 
             <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard3}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
                 
-              <p className=' fw-bold'>hellow Knowledge</p> 
+              <p className=' fw-bolder text-xl fontfam'>hellow Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               </ReactCardFlip>
@@ -127,16 +128,16 @@ const Chooseus = () => {
             style={{backgroundColor : isflipcard4? "rgb(39,46,57)" : "rgb(226,232,240)",
                    color: isflipcard4? "whitesmoke": "black" }}
             className='transition duration-300 position-relative lg:right-20 border flex rounded-s-3xl my-4 bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '>
+            <div className='py-4 w-[100%] h-[220px] sm:h-[180px] ps-2 md:p-6 '>
                <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard4}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
                 
-              <p className=' fw-bold'>hellow Knowledge</p> 
+              <p className=' fw-bolder text-xl fontfam'>hellow Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               </ReactCardFlip>
@@ -158,16 +159,16 @@ const Chooseus = () => {
             style={{backgroundColor : isflipcard5? "rgb(39,46,57)" : "rgb(226,232,240)",
                    color: isflipcard5? "whitesmoke": "black" }}
             className='my-4 transition duration-300 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '>
+            <div className='py-4 w-[100%] h-[220px] sm:h-[180px] ps-2 md:p-6 '>
                <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard5}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >
                 
-              <p className=' fw-bold'>hellow Knowledge</p> 
+              <p className=' fw-bolder text-xl fontfam'>hellow Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               </ReactCardFlip>
@@ -189,11 +190,11 @@ const Chooseus = () => {
             style={{backgroundColor : isflipcard6? "rgb(39,46,57)" : "rgb(226,232,240)",
                    color: isflipcard6? "whitesmoke": "black" }}
             className='my-4 transition duration-300 position-relative lg:right-20 border flex rounded-s-3xl bg-slate-200'>
-            <div className='py-4 ps-2 md:p-6 '>
+            <div className='py-4 w-[100%] h-[220px] sm:h-[180px] ps-2 md:p-6 '>
                <ReactCardFlip flipDirection='vertical' isFlipped={isflipcard6}>
               <div className='thefrontcard'>
                 
-              <p className='fw-bolder text-2xl fontfam'>well Knowledge</p> 
+              <p className='fw-bolder text-xl fontfam'>well Knowledge</p> 
                  <p>Foresee the pain trouble all that  rationanl encounter</p>
               </div>
               <div className='thebackcard' >

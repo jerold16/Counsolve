@@ -34,16 +34,15 @@ for Top-Notch Service.</p>
        </button>
             </Col>
             <Col lg={3} className='bg-white shadow-2xl rounded-3xl'>
-            <div className='px-3 mt-3 flex justify-between'>
+            <div className='px-3 mt-3 flex border-bottom justify-between'>
                     <div>
                       <p className='fw-semibold text-2xl'>Support</p>
                       <p className='text-lg text-slate-500'>From our expert team</p>
                     </div>
-                    <img className="w-16 h-16" src={require("../assest/talk.png")} alt="" />
+                    <img className="w-16 h-16 mt-auto" src={require("../assest/talk.png")} alt="" />
               </div>
-              <hr />
-              <div id='phone' className='flex'>
-              <img className='w-12 h-12' src={require("../assest/old-typical-phone (1).png")} alt="" />
+              <div id='phone' className='flex mt-3'>
+              <img className='w-12 h-12' src={require("../assest/call.png")} alt="" />
                  <div className='ms-4'>
                      <p className='text-black fw-semibold'>PHONE</p>
                      <p className='text-slate-600'>
@@ -55,7 +54,7 @@ Operation: <span className='cursor-pointer'> (+41)-888.22.333 </span>
                  </div>
               </div>
               <div id='email' className='flex'>
-              <img className='w-12 h-12' src={require("../assest/gmail.png")} alt="" />
+              <img className='w-12 h-12' src={require("../assest/open.png")} alt="" />
                  <div className='ms-4'>
                      <p className='text-black fw-semibold'>EMAIL</p>
                      <p className='text-slate-600 cursor-pointer'>
@@ -67,16 +66,15 @@ Operation: <span className='cursor-pointer'> (+41)-888.22.333 </span>
             </Col>
             <Col lg={3} className='bg-white shadow-2xl rounded-3xl'>
              
-              <div className='px-3 mt-3 flex justify-between'>
+            <div className='px-3 mt-3 flex border-bottom justify-between'>
                     <div>
                       <p className='fw-semibold text-2xl'>Address</p>
-                      <p className='text-lg text-slate-500'>To vist our company</p>
+                      <p className='text-lg text-slate-500'>To visit our company</p>
                     </div>
-                    <img className="w-16 h-16" src={require("../assest/office-building.png")} alt="" />
+                    <img className="w-20 h-20 mt-auto" src={require("../assest/smart-city (1).png")} alt="" />
               </div>
-              <hr />
-              <div id='phone' className='flex'>
-              <img className='w-12 h-12' src={require("../assest/location-pin.png")} alt="" />
+              <div id='phone' className='flex mt-3'>
+              <img className='w-12 h-12' src={require("../assest/address.png")} alt="" />
                  <div className='ms-4'>
                      <p className='text-black fw-semibold'>ADDRESS</p>
                      <p className='text-slate-600'>
@@ -86,7 +84,7 @@ Hobert, LA 90010, USA.
                  </div>
               </div>
               <div id='email' className='flex'>
-              <img className='w-12 h-12' src={require("../assest/working-time.png")} alt="" />
+              <img className='w-12 h-12' src={require("../assest/time.png")} alt="" />
                  <div className='ms-4'>
                      <p className='text-black fw-semibold'>OFF.HOURS</p>
                      <p className='text-slate-600 cursor-pointer'>
@@ -107,20 +105,23 @@ Hobert, LA 90010, USA.
               <p className='text-5xl fw-semibold text-white'>Let’s Talk!...
 Send Your Message</p>
               <p className='text-slate-400 text-lg'>Fill in the form and let us know what you need.</p>
+              
+              <img className='mt-44 d-none d-lg-block rounded-3xl' src={require("../assest/—Pngtree—white collar office work decoration_4060049.png")} alt="" />
             </Col>
             <Col lg={5} className='mx-auto'>
               <form action="">
-                <div id='name' className='text-white justify-between flex flex-col md:flex-row fw-semibold'>
+                <div id='name' 
+                className='text-white justify-between flex flex-col md:flex-row fw-semibold'>
                    <div>
                    First Name
                    <input required  type="text" 
-                   className='p-3 text-slate-500 w-full md:w-auto block mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
+                   className='p-3 text-slate-500 focus:border-none w-full md:w-auto block mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
                    placeholder='Enter your first name' />
                    </div>
                    <div>
                    Last Name
                    <input required  type="text" 
-                   className='p-3 text-slate-500 w-full md:w-auto block mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
+                   className='p-3 text-slate-500 focus:border-none w-full md:w-auto block mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
                    placeholder='Enter your last name' />
                    </div>
                    
@@ -129,13 +130,13 @@ Send Your Message</p>
                    <div>
                    Company
                    <input required  type="text" 
-                   className='p-3 text-slate-500 block w-full md:w-auto mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
+                   className='p-3 text-slate-500 focus:border-none block w-full md:w-auto mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
                    placeholder='Enter your Company name' />
                    </div>
                    <div>
                    Phone
                    <input required  type="text" 
-                   className='p-3 text-slate-500 block  w-full md:w-auto mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
+                   className='p-3 text-slate-500 focus:border-none block  w-full md:w-auto mt-4 rounded-s-2xl bg-inherit border-2 border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
                    placeholder='Phone num' />
                    </div>
                    
@@ -143,14 +144,14 @@ Send Your Message</p>
                 <div className='text-white'>
                    Email Address 
                    <input required  type="text" 
-                   className='p-3 text-slate-500 w-full block mt-4 rounded-s-2xl bg-inherit border-2
+                   className='p-3 text-slate-500 focus:border-none w-full block mt-4 rounded-s-2xl bg-inherit border-2
                     border-slate-600 rounded-tr-2xl m-2 focus:outline-none focus:outline-pink-700 ' 
                    placeholder='Enter your Address' />
                    </div>
                    <div className='text-white'>Are you interested in?
                    <select name="" id="selectdrop"
                    
-                        className=' p-3 text-slate-500 border-2 focus:outline-none border-slate-500 w-full  cursor-pointer block bg-inherit  rounded-s-2xl rounded-tr-2xl text-lg m-2 focus:outline-pink-600'>
+                        className=' p-3 text-slate-500 focus:border-none border-2 focus:outline-none border-slate-500 w-full  cursor-pointer block bg-inherit  rounded-s-2xl rounded-tr-2xl text-lg m-2 focus:outline-pink-600'>
                             <option value="Risk Management">Risk Management</option>
                             
                             <option value="Traditional consulting"> Traditional consulting</option>
@@ -162,7 +163,7 @@ Send Your Message</p>
                       <div className='text-white'>
                         Message
                         <textarea name="Message" placeholder='Message'
-                        className='p-3 block bg-inherit focus:outline-none w-full border-2 border-slate-600  text-slate-500  rounded-s-2xl rounded-tr-2xl text-lg m-2 focus:outline-pink-600 '
+                        className='p-3 block focus:border-none bg-inherit focus:outline-none w-full border-2 border-slate-600  text-slate-500  rounded-s-2xl rounded-tr-2xl text-lg m-2 focus:outline-pink-600 '
                          id="" cols="20" rows="5">
 
                         </textarea>

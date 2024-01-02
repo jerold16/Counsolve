@@ -84,14 +84,22 @@ const Project = () => {
         <LogoNav/>
         <MainNav/>
         <TitleBanner data={"Projects"}/>
-
+        <h1 className='h-20'></h1>
+         <div className='container mulish fw-bolder text-lg flex flex-wrap justify-around mx-auto'>
+            <p className='cursor-pointer mx-1 text-salte-900'>View All</p>
+            <p className='cursor-pointer mx-1 text-salte-900'>Business</p>
+            <p className='cursor-pointer mx-1 text-salte-900'>Investment</p>
+            <p className='cursor-pointer mx-1 text-salte-900'>Innovative</p>
+            <p className='cursor-pointer mx-1 text-salte-900'>Consulting</p>
+            <p className='cursor-pointer mx-1 text-salte-900'>Management</p>
+         </div>
         <>
-         <div className={`flex ${anime} animate__animated transi durationani  flex-wrap mx-auto mt-3  container gap-3 justify-between`}>
+         <div className={`flex ${anime} animate__animated transi durationani  flex-wrap mx-auto mt-3  container-lg gap-3 justify-between`}>
                    {
                     currentItems.map((obj)=>{
                     //   console.log(obj.photo);
                         return(
-                <div className='position-relative w-auto h-auto'>
+                <div className='position-relative mx-auto transi w-auto h-auto'>
                   
                     {/* <img  className='d-block w-[100%] rounded-3xl'
                      src={require(`../assest/project-17-370x470.jpg`)} alt="" /> */}
